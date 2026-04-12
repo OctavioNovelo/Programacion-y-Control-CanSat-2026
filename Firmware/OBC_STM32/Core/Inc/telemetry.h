@@ -14,8 +14,8 @@ typedef struct __attribute__((packed)) {
     uint8_t  magic;        // 0xCA para identificar nuestros paquetes
     uint8_t  pkt_id;       // Contador de paquetes
     int16_t  temp;         // Temperatura (centígrados)
-    uint16_t pressure;     // Presión (Pa / 100)
-    uint32_t altitude;     // Altitud calculada
+    uint32_t pressure;     // Presión (Pa / 100)
+    int32_t altitude;     // Altitud calculada
     int16_t  accel_x;      // Aceleración escalada (v * 100)
     int16_t  accel_y;
     int16_t  accel_z;
@@ -27,7 +27,7 @@ typedef struct __attribute__((packed)) {
 } CanSat_Packet;
 
 void telemetry_init(void);
-void telemetry_build(CanSat_Packet *p, int16_t t, uint16_t pr, uint32_t alt);
+void telemetry_build(CanSat_Packet *p, int16_t t, uint32_t pr, int32_t alt);
 void telemetry_update_imu(CanSat_Packet *p, float ax, float ay, float az, float gx, float gy, float gz);
 
 #endif /* INC_TELEMETRY_H_ */

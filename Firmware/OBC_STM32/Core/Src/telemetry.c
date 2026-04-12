@@ -14,7 +14,7 @@ static uint8_t calculate_checksum(uint8_t *data, uint8_t len) {
     return crc;
 }
 
-void telemetry_build(CanSat_Packet *p, int16_t t, uint16_t pr, uint32_t alt) {
+void telemetry_build(CanSat_Packet *p, int16_t t, uint32_t pr, int32_t alt) {
     p->magic = 0xCA;
     p->pkt_id = global_pkt_id++;
     p->temp = t;

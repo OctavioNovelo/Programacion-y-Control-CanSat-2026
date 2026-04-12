@@ -26,7 +26,9 @@ static int32_t t_fine;
 
 // --- Variables de Trabajo (Escalares) ---
 static float temperature, pressure, altitude;
-
+volatile float a;
+float pressure_init = 0.0f;
+bool is_calibrated = false;
 // --- Datos del BNO085 ---
 
 static float last_accel[3], last_gyro[3];
@@ -139,10 +141,13 @@ void sensors_init(void) {
     HAL_I2C_Mem_Write(&hi2c1, BME280_ADDR, 0xF4, 1, &ctrl, 1, 100);
 }
 
-
+float altitude_filtered = 0.0f;
+float alpha = 0.1f; // Factor de suavizado (0.1 es suave, 0.9 es casi sin filtro)
 
 void sensors_service(void) {
     sh2_service(); // Procesa BNO085
+
+
     // Lectura de datos crudos BME280
     uint8_t data[6];
 
@@ -153,8 +158,16 @@ void sensors_service(void) {
         uint32_t p = compensate_P(adc_P);
         temperature = t / 100.0f;
         pressure = p / 256.0f;
+
+        if (!is_calibrated && pressure > 0) {
+        	pressure_init = pressure;
+            is_calibrated = true;
+        }
         // Cálculo de altitud simple (p0 = 101325 Pa)
-        altitude = 44330.0f * (1.0f - powf(pressure / 101325.0f, 0.1903f));
+        float alt_raw = 44330.0f * (1.0f - powf(pressure / pressure_init, 0.1903f));
+        altitude_filtered = (alpha * alt_raw) + ((1.0f - alpha) * altitude_filtered);
+        altitude = altitude_filtered;
+        a = altitude;
     }
 }
 
@@ -163,7 +176,7 @@ void sensors_service(void) {
 void read_sensors(CanSat_Packet *p) {
     // 1. Usamos tu función de telemetry.c para poner Magic, ID y datos ambientales
     // Convertimos los floats a los tipos que espera la función (int16, uint16, etc)
-    telemetry_build(p, (int16_t)(temperature * 100), (uint16_t)pressure, (uint32_t)(altitude * 100));
+    telemetry_build(p, (int16_t)(temperature * 100), (uint32_t)pressure, (int32_t)(altitude * 100));
 
     // 2. Actualizamos el IMU y calculamos el Checksum automáticamente
     // Esto llamará a tu función calculate_checksum que ya tienes en telemetry.c
