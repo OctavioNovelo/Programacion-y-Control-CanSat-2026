@@ -1,5 +1,0 @@
-../Core/Src/sx1278_rx.c:13:6:sx1278_rx_init	1
-../Core/Src/sx1278_rx.c:60:9:sx1278_rx_available	1
-../Core/Src/sx1278_rx.c:67:9:sx1278_rx_read	4
-../Core/Src/sx1278_rx.c:93:8:sx1278_rx_rssi	1
-../Core/Src/sx1278_rx.c:99:8:sx1278_rx_snr	2

@@ -1,0 +1,11 @@
+../Core/Src/sensors.c:36:13:event_handler	4
+../Core/Src/sensors.c:63:16:compensate_T	1
+../Core/Src/sensors.c:74:17:compensate_P	2
+../Core/Src/sensors.c:93:6:sensors_init	1
+../Core/Src/sensors.c:144:6:sensors_service	2
+../Core/Src/sensors.c:163:6:read_sensors	1
+../Core/Src/sensors.c:176:10:hal_getTimeUs	1
+../Core/Src/sensors.c:182:5:hal_write	2
+../Core/Src/sensors.c:193:5:hal_read	6
+../Core/Src/sensors.c:229:5:hal_open	1
+../Core/Src/sensors.c:230:6:hal_close	1
