@@ -1,3 +1,0 @@
-../Core/Src/telemetry.c:11:16:calculate_checksum	24	static
-../Core/Src/telemetry.c:17:6:telemetry_build	24	static
-../Core/Src/telemetry.c:25:6:telemetry_update_imu	40	static

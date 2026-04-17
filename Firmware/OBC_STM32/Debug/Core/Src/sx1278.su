@@ -1,5 +1,0 @@
-../Core/Src/sx1278.c:11:13:sx1278_write	24	static
-../Core/Src/sx1278.c:18:6:sx1278_init	16	static
-../Core/Src/sx1278.c:44:6:sx1278_transmit_it	24	static
-../Core/Src/sx1278.c:60:6:sx1278_clear_irq	8	static
-../Core/Src/sx1278.c:64:9:sx1278_read_reg	24	static
