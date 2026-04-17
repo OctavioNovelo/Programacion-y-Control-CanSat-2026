@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "STM32 Debug (Cortex-Debug)",
+            "cwd": "${workspaceFolder}/Firmware/CanSat_Final",
+            "executable": "${workspaceFolder}/Firmware/CanSat_Final/build/debug/CanSat_Final.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "stlink",
+            "device": "STM32F411CE",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+            "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 4
+            },
+            "svdFile": "${workspaceFolder}/Firmware/CanSat_Final/STM32F411.svd",
+            "showDevDebugOutput": "none"
+        }
+    ]
+}

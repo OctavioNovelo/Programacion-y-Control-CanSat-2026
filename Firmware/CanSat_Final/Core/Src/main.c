@@ -24,7 +24,7 @@
 
 /* ---- Configuración de Rendimiento ---- */
 #define LORA_POWER_LEVEL    0x82            /* Potencia baja-media */
-#define LORA_INTERVAL_MS    50              /* Intentar 20 Hz de radio */
+#define LORA_INTERVAL_MS    1000            /* 1 Hz para estabilidad y debug */
 
 /* USER CODE BEGIN PV */
 extern volatile uint8_t sx1278_tx_done;
@@ -46,6 +46,53 @@ volatile uint8_t             g_lora_ready = 1;
 
 static volatile uint8_t  bno_int_flag = 0;
 static volatile uint32_t bno_int_time_us = 0;
+
+/* BME280 Calibration Data */
+typedef struct {
+    uint16_t dig_T1;
+    int16_t  dig_T2;
+    int16_t  dig_T3;
+    uint16_t dig_P1;
+    int16_t  dig_P2;
+    int16_t  dig_P3;
+    int16_t  dig_P4;
+    int16_t  dig_P5;
+    int16_t  dig_P6;
+    int16_t  dig_P7;
+    int16_t  dig_P8;
+    int16_t  dig_P9;
+} BME280_CalibData;
+
+BME280_CalibData bme_calib;
+int32_t t_fine;
+
+/* BME280 Compensation Formulas */
+int32_t BME280_compensate_T_int32(int32_t adc_T) {
+    int32_t var1, var2, T;
+    var1 = ((((adc_T >> 3) - ((int32_t)bme_calib.dig_T1 << 1))) * ((int32_t)bme_calib.dig_T2)) >> 11;
+    var2 = (((((adc_T >> 4) - ((int32_t)bme_calib.dig_T1)) * ((adc_T >> 4) - ((int32_t)bme_calib.dig_T1))) >> 12) *
+            ((int32_t)bme_calib.dig_T3)) >> 14;
+    t_fine = var1 + var2;
+    T = (t_fine * 5 + 128) >> 8;
+    return T;
+}
+
+uint32_t BME280_compensate_P_int64(int32_t adc_P) {
+    int64_t var1, var2, p;
+    var1 = ((int64_t)t_fine) - 128000;
+    var2 = var1 * var1 * (int64_t)bme_calib.dig_P6;
+    var2 = var2 + ((var1 * (int64_t)bme_calib.dig_P5) << 17);
+    var2 = var2 + (((int64_t)bme_calib.dig_P4) << 35);
+    var1 = ((var1 * var1 * (int64_t)bme_calib.dig_P3) >> 8) + ((var1 * (int64_t)bme_calib.dig_P2) << 12);
+    var1 = (((((int64_t)1) << 47) + var1)) * ((int64_t)bme_calib.dig_P1) >> 33;
+    if (var1 == 0) return 0;
+    p = 1048576 - adc_P;
+    p = (((p << 31) - var2) * 3125) / var1;
+    var1 = (((int64_t)bme_calib.dig_P9) * (p >> 13) * (p >> 13)) >> 25;
+    var2 = (((int64_t)bme_calib.dig_P8) * p) >> 19;
+    p = ((p + var1 + var2) >> 8) + (((int64_t)bme_calib.dig_P7) << 4);
+    return (uint32_t)(p >> 8); // Pressure in Pa
+}
 /* USER CODE END PV */
 
 /* Prototypes */
@@ -136,6 +183,34 @@ int main(void)
     for(int i=0; i<6; i++) { HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_4); HAL_Delay(30); }
 
     lora_fast_init();
+
+    /* Inicialización BME280: Chip ID y Calibración */
+    uint8_t chip_id = 0;
+    HAL_I2C_Mem_Read(&hi2c1, (0x76<<1), 0xD0, 1, &chip_id, 1, 10);
+    
+    uint8_t calib[24];
+    if (HAL_I2C_Mem_Read(&hi2c1, (0x76<<1), 0x88, 1, calib, 24, 10) == HAL_OK) {
+        bme_calib.dig_T1 = (uint16_t)((calib[1] << 8) | calib[0]);
+        bme_calib.dig_T2 = (int16_t)((calib[3] << 8) | calib[2]);
+        bme_calib.dig_T3 = (int16_t)((calib[5] << 8) | calib[4]);
+        bme_calib.dig_P1 = (uint16_t)((calib[7] << 8) | calib[6]);
+        bme_calib.dig_P2 = (int16_t)((calib[9] << 8) | calib[8]);
+        bme_calib.dig_P3 = (int16_t)((calib[11] << 8) | calib[10]);
+        bme_calib.dig_P4 = (int16_t)((calib[13] << 8) | calib[12]);
+        bme_calib.dig_P5 = (int16_t)((calib[15] << 8) | calib[14]);
+        bme_calib.dig_P6 = (int16_t)((calib[17] << 8) | calib[16]);
+        bme_calib.dig_P7 = (int16_t)((calib[19] << 8) | calib[18]);
+        bme_calib.dig_P8 = (int16_t)((calib[21] << 8) | calib[20]);
+        bme_calib.dig_P9 = (int16_t)((calib[23] << 8) | calib[22]);
+    }
+
+    /* 0xF5 config: standby 0.5ms, filter off */
+    uint8_t f5 = 0x00;
+    HAL_I2C_Mem_Write(&hi2c1, (0x76<<1), 0xF5, 1, &f5, 1, 10);
+    /* 0xF4 ctrl_meas: osrs_t x1, osrs_p x1, normal mode */
+    uint8_t f4 = 0x27;
+    HAL_I2C_Mem_Write(&hi2c1, (0x76<<1), 0xF4, 1, &f4, 1, 10);
+
     sh2_open(&g_sh2_hal, sh2_event_cb, NULL);
     sh2_setSensorCallback(leer_bno, NULL);
     sh2_SensorConfig_t cfg = { .reportInterval_us = 10000 };
@@ -157,12 +232,20 @@ int main(void)
         if (t_now - t_bme >= 100) {
             t_bme = t_now;
             uint8_t d[6];
-            if (HAL_I2C_Mem_Read(&hi2c1, (0x76<<1), 0xF7, 1, d, 6, 5) == HAL_OK) {
-                uint32_t p_raw = (uint32_t)((d[0]<<12)|(d[1]<<4)|(d[2]>>4));
-                pressure = p_raw / 100;
-                if (!is_calibrated && p_raw > 0) { pressure_init = (float)p_raw; is_calibrated = 1; }
+            if (HAL_I2C_Mem_Read(&hi2c1, (0x76<<1), 0xF7, 1, d, 6, 10) == HAL_OK) {
+                uint32_t p_raw = (uint32_t)((d[0] << 12) | (d[1] << 4) | (d[2] >> 4));
+                uint32_t t_raw = (uint32_t)((d[3] << 12) | (d[4] << 4) | (d[5] >> 4));
+                
+                /* Proper Bosch Compensation */
+                int32_t t_final = BME280_compensate_T_int32(t_raw);
+                uint32_t p_final = BME280_compensate_P_int64(p_raw);
+
+                temperature = t_final;    /* En 0.01 degC */
+                pressure = p_final / 100; /* En hPa */
+
+                if (!is_calibrated && p_final > 0) { pressure_init = (float)p_final; is_calibrated = 1; }
                 if (is_calibrated) {
-                    float al = 44330.0f * (1.0f - powf((float)p_raw/pressure_init, 0.1903f));
+                    float al = 44330.0f * (1.0f - powf((float)p_final/pressure_init, 0.1903f));
                     altitude = (uint32_t)al;
                 }
                 init_bme = 1;
@@ -197,10 +280,16 @@ int main(void)
 static void lora_send_async(void) {
     static uint8_t buf[sizeof(TelemetryPacketLoRa) + sizeof(PacketLoRaBNO)];
     TelemetryPacketLoRa pL;
-    telemetry_build_LoRa(&pL, (int16_t)25, (uint16_t)altitude, (uint16_t)pressure, init_bme);
+    telemetry_build_LoRa(&pL, (int16_t)temperature, (uint16_t)altitude, (uint16_t)pressure, init_bme);
     PacketLoRaBNO pB;
     telemetry_LoRa_BNO(&pB, accel_x, accel_y, accel_z, gyro_x, gyro_y, gyro_z);
-    memcpy(buf, &pL, sizeof(pL)); memcpy(buf+sizeof(pL), &pB, sizeof(pB));
+    
+    /* Guardamos para debug local */
+    g_last_lora_packet = pL;
+    g_last_bno_packet = pB;
+
+    memcpy(buf, &pL, sizeof(pL)); 
+    memcpy(buf+sizeof(pL), &pB, sizeof(pB));
     
     HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_4);
     g_lora_ready = 0;
@@ -213,21 +302,26 @@ void SystemClock_Config(void) {
     RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
     __HAL_RCC_PWR_CLK_ENABLE();
     __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
-    RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
-    RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+    RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+    RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+    RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
     RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-    RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-    RCC_OscInitStruct.PLL.PLLM = 12;
-    RCC_OscInitStruct.PLL.PLLN = 192; /* 96MHz real */
+    RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+    RCC_OscInitStruct.PLL.PLLM = 8;
+    RCC_OscInitStruct.PLL.PLLN = 84;
     RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
     RCC_OscInitStruct.PLL.PLLQ = 4;
-    HAL_RCC_OscConfig(&RCC_OscInitStruct);
+    if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK) {
+        Error_Handler();
+    }
     RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK|RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
     RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
     RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
     RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
     RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
-    HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_3);
+    if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK) {
+        Error_Handler();
+    }
 }
 
 void Error_Handler(void) { while(1); }
