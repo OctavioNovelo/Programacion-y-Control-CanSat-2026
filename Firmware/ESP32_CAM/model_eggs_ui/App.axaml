@@ -1,0 +1,25 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="model_eggs_ui.App"
+             RequestedThemeVariant="Default">
+    <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.Styles>
+        <FluentTheme />
+        <StyleInclude Source="Styles/AppDefaultStyles.axaml"></StyleInclude>
+    </Application.Styles>
+
+    <Application.Resources>
+        <SolidColorBrush x:Key="PrimaryBackground">#211729</SolidColorBrush>
+        <SolidColorBrush x:Key="SecondaryBackground">#2b2441</SolidColorBrush>
+        <SolidColorBrush x:Key="WidgetBackground1">#33315d</SolidColorBrush>
+        <SolidColorBrush x:Key="WidgetBackground2">#414776</SolidColorBrush>
+        <SolidColorBrush x:Key="AccentColor">#4d80ab</SolidColorBrush>
+        <SolidColorBrush x:Key="Blue">#79b4d5</SolidColorBrush>
+        <SolidColorBrush x:Key="BlueRight">#a5d5df</SolidColorBrush>
+        <SolidColorBrush x:Key="RedLeft">#8d5180</SolidColorBrush>
+        <SolidColorBrush x:Key="GreenOut">#6b9a71</SolidColorBrush>
+        <SolidColorBrush x:Key="White">#fffef9</SolidColorBrush>
+        <FontFamily x:Key="NeptuneLander">avares://model_eggs_ui/Assets/Fonts/Neptune-Lander.ttf#Neptune Lander</FontFamily>
+    </Application.Resources>
+</Application>
