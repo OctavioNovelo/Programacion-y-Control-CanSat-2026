@@ -97,7 +97,11 @@ static int sh2hal_write(sh2_Hal_t *s, uint8_t *p, unsigned l) {
     if (HAL_I2C_Master_Transmit(&hi2c1, (0x4B<<1), p, l, 10) != HAL_OK) return 0;
     return (int)l;
 }
-sh2_Hal_t g_sh2_hal = { .open=sh2hal_open, .read=sh2hal_read, .write=sh2hal_write, .getTimeUs=micros32 };
+static uint32_t sh2hal_getTimeUs(sh2_Hal_t *s) {
+    (void)s;
+    return micros32();
+}
+sh2_Hal_t g_sh2_hal = { .open=sh2hal_open, .read=sh2hal_read, .write=sh2hal_write, .getTimeUs=sh2hal_getTimeUs };
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
     if (GPIO_Pin == LORA_DIO0_Pin) sx1278_tx_done = 1;
