@@ -11,6 +11,7 @@
 #include "crc.h"
 #include "i2c.h"
 #include "spi.h"
+#include "stm32f4xx_hal.h"
 #include "usart.h"
 #include "gpio.h"
 #include <stdio.h>
@@ -25,6 +26,8 @@
 /* ---- Configuración de Rendimiento ---- */
 #define LORA_POWER_LEVEL    0x82            /* Potencia baja-media */
 #define LORA_INTERVAL_MS    1000            /* 1 Hz para estabilidad y debug */
+#define ALTITUD_DESPLIEGUE  250
+             /* <--- CAMBIA ESTE VALOR PARA TUS PRUEBAS (30, 100, 200...) */
 
 /* USER CODE BEGIN PV */
 extern volatile uint8_t sx1278_tx_done;
@@ -38,6 +41,10 @@ volatile uint32_t pressure = 0, altitude = 0, tx_count = 0;
 volatile float    accel_x=0, accel_y=0, accel_z=0, gyro_x=0, gyro_y=0, gyro_z=0;
 volatile float    pressure_init = 0.0f, altitude_filtered = 0.0f;
 volatile uint8_t  is_calibrated = 0, apogeo_detectado = 0, trigger_activado = 0;
+volatile uint8_t  confirmaciones_altitud = 0; 
+volatile uint8_t  subida_completada = 0;      /* Indica que ya pasamos la altitud de despliegue subiendo */
+volatile uint32_t t_inicio_liberacion = 0;    /* Para el temporizador de apagado */
+volatile uint8_t  liberacion_en_progreso = 0; /* Para saber si el pin está encendido */
 volatile int      g_sh2_open_rc = 999;
 
 volatile TelemetryPacketLoRa g_last_lora_packet;
@@ -247,9 +254,38 @@ int main(void)
                 if (is_calibrated) {
                     float al = 44330.0f * (1.0f - powf((float)p_final/pressure_init, 0.1903f));
                     altitude = (uint32_t)al;
+
+                    /* --- LÓGICA DE DESPLIEGUE (Doble Confirmación) --- */
+                    
+                    // 1. Detectar que ya subimos (Armado del sistema)
+                    if (!subida_completada && altitude > (ALTITUD_DESPLIEGUE + 30)) {
+                        subida_completada = 1; // Ya estamos arriba, ahora esperamos la bajada
+                    }
+
+                    // 2. Disparar solo si ya subimos y ahora estamos bajando de la altitud objetivo
+                    if (subida_completada && !trigger_activado) {
+                        if (altitude <= ALTITUD_DESPLIEGUE) {
+                            confirmaciones_altitud++;
+                            // Sin HAL_Delay para que la telemetría siga fluyendo
+                            if (confirmaciones_altitud >= 5) { // ~500ms de confirmación estable
+                                HAL_GPIO_WritePin(GPIOB, PIN_LIBERACION_Pin, GPIO_PIN_SET);
+                                trigger_activado = 1;
+                                liberacion_en_progreso = 1;
+                                t_inicio_liberacion = HAL_GetTick();
+                            }
+                        } else {
+                            confirmaciones_altitud = 0;
+                        }
+                    }
                 }
                 init_bme = 1;
             }
+        }
+
+        /* --- SEGURIDAD: Apagar el pin de liberación tras 5 segundos --- */
+        if (liberacion_en_progreso && (t_now - t_inicio_liberacion >= 5000)) {
+            HAL_GPIO_WritePin(GPIOB, PIN_LIBERACION_Pin, GPIO_PIN_RESET);
+            liberacion_en_progreso = 0;
         }
 
         /* Lógica LoRa */

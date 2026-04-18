@@ -34,6 +34,8 @@ public partial class MainWindow : Window
     private const byte CameraLeftId = 0x00;
     private const byte CameraRightId = 0x01;
 
+    private const byte MagicLoRa = 0xCA;
+
     // Serial Settings
     private const string DefaultPortName = "/dev/ttyUSB0";
     private const int DefaultBaudRate = 115200;
@@ -57,6 +59,7 @@ public partial class MainWindow : Window
     private ushort _payloadLength;
     private byte[] _payloadBuffer = Array.Empty<byte>();
     private int _payloadIndex = 0;
+    private string _lineBuffer = "";
 
     // Image Buffering & Logic
     private readonly string _leftImagePath = Path.Combine(AppContext.BaseDirectory, "left.jpg");
@@ -159,15 +162,98 @@ public partial class MainWindow : Window
             byte[] buffer = new byte[bytesToRead];
             int read = _serialPort.Read(buffer, 0, bytesToRead);
 
+            // Log raw data in hex for debugging
+            string hex = BitConverter.ToString(buffer, 0, read).Replace("-", " ");
+            AppendRawLog("RAW", hex);
+
             for (int i = 0; i < read; i++)
             {
                 ProcessIncomingByte(buffer[i]);
+                ProcessStringByte(buffer[i]);
             }
         }
         catch (Exception ex)
         {
             AppendRawLog("SERIAL_READ_ERR", ex.Message);
         }
+    }
+
+    private void ProcessStringByte(byte b)
+    {
+        if (b == '\n' || b == '\r')
+        {
+            if (!string.IsNullOrWhiteSpace(_lineBuffer))
+            {
+                ParseLine(_lineBuffer);
+                _lineBuffer = "";
+            }
+        }
+        else if (b >= 32 && b <= 126)
+        {
+            _lineBuffer += (char)b;
+            if (_lineBuffer.Length > 200) _lineBuffer = "";
+        }
+    }
+
+    private void ParseLine(string line)
+    {
+        // Parser robusto para telemetría basada en etiquetas ASCII
+        try
+        {
+            string trimmedLine = line.Trim();
+            if (string.IsNullOrEmpty(trimmedLine)) return;
+
+            // Separar etiqueta de valor
+            int colonIndex = trimmedLine.IndexOf(':');
+            if (colonIndex == -1) return;
+
+            string tag = trimmedLine.Substring(0, colonIndex).Trim();
+            string valuePart = trimmedLine.Substring(colonIndex + 1).Trim();
+
+            Dispatcher.UIThread.Post(() => {
+                try {
+                    switch (tag)
+                    {
+                        case "Temp":
+                            if (float.TryParse(valuePart, out float temp))
+                                TemperatureLabel.Content = $"{temp:F2} °C";
+                            break;
+
+                        case "Pres":
+                            if (float.TryParse(valuePart, out float pres))
+                                PressureLabel.Content = $"{pres:F2} hPa";
+                            break;
+
+                        case "Alt":
+                            if (float.TryParse(valuePart, out float alt))
+                                VerticalVelocityLabel.Content = $"{alt:F2} m"; // Reusando para Altitud
+                            break;
+
+                        case "Accel":
+                            // Formato esperado: x,y,z
+                            var accelParts = valuePart.Split(',');
+                            if (accelParts.Length >= 3)
+                            {
+                                if (float.TryParse(accelParts[0], out float ax) &&
+                                    float.TryParse(accelParts[1], out float ay) &&
+                                    float.TryParse(accelParts[2], out float az))
+                                {
+                                    float magnitude = (float)Math.Sqrt(ax * ax + ay * ay + az * az);
+                                    AccelerationLabel.Content = $"{magnitude:F2} m/s²";
+                                }
+                            }
+                            break;
+
+                        case "Gyro":
+                            // El giroscopio no tiene label propio en la UI actual,
+                            // pero podríamos loguearlo o actualizar un campo genérico si existiera.
+                            // Por ahora solo logueamos en RAW si es necesario.
+                            break;
+                    }
+                } catch { }
+            });
+        }
+        catch { }
     }
 
     private void ProcessIncomingByte(byte b)
@@ -178,6 +264,14 @@ public partial class MainWindow : Window
                 if (b == PacketStartOfFrame)
                 {
                     _currentState = SerialState.ReadType;
+                }
+                else if (b == MagicLoRa)
+                {
+                    _packetType = MagicLoRa;
+                    _payloadLength = 33; // Remaining bytes for TelemetryPacketLoRa (9) + PacketLoRaBNO (24)
+                    _payloadBuffer = new byte[_payloadLength];
+                    _payloadIndex = 0;
+                    _currentState = SerialState.ReadPayload;
                 }
                 break;
 
@@ -216,7 +310,15 @@ public partial class MainWindow : Window
                 
                 if (_payloadIndex >= _payloadLength)
                 {
-                    _currentState = SerialState.ReadChecksum;
+                    if (_packetType == MagicLoRa)
+                    {
+                        HandleValidPacket(_packetType, _payloadBuffer);
+                        _currentState = SerialState.WaitStart;
+                    }
+                    else
+                    {
+                        _currentState = SerialState.ReadChecksum;
+                    }
                 }
                 break;
 
@@ -237,6 +339,12 @@ public partial class MainWindow : Window
 
     private void HandleValidPacket(byte type, byte[] payload)
     {
+        if (type == MagicLoRa)
+        {
+            ProcessLoRaPacket(payload);
+            return;
+        }
+
         switch (type)
         {
             case PktVVel:
@@ -260,6 +368,35 @@ public partial class MainWindow : Window
             default:
                 AppendRawLog("UNKNOWN", $"Type 0x{type:X2} Length {payload.Length}");
                 break;
+        }
+    }
+
+    private void ProcessLoRaPacket(byte[] payload)
+    {
+        if (payload.Length < 9) return;
+
+        // TelemetryPacketLoRa (skipping magic 0xCA)
+        // payload[0]: pkt
+        // payload[1,2]: temperatura (Little Endian)
+        // payload[3,4]: altitud (Little Endian)
+        // payload[5,6]: presion (Little Endian)
+        // payload[7]: verificacion
+        // payload[8]: checksum (telemetry-only)
+
+        short temp = (short)((payload[2] << 8) | payload[1]);
+        short alt = (short)((payload[4] << 8) | payload[3]);
+        ushort pres = (ushort)((payload[6] << 8) | payload[5]);
+
+        Dispatcher.UIThread.Post(() => {
+            TemperatureLabel.Content = $"{(temp / 100.0f):F2} °C";
+            PressureLabel.Content = $"{pres} hPa";
+            VerticalVelocityLabel.Content = $"{alt} m"; // Reusing label for altitude for now
+        });
+
+        AppendRawLog("LORA_TEL", $"Pkt:{payload[0]} T:{(temp / 100.0f):F2} A:{alt} P:{pres}");
+        
+        if (payload.Length >= 9 + 24) {
+             AppendRawLog("LORA_IMU", "IMU data received");
         }
     }
 

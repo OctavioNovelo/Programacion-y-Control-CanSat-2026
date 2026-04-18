@@ -54,40 +54,40 @@ void setup() {
   Serial.begin(115200);
   while (!Serial);
 
-  Serial.println(F("\n--- Estacion Terrena CanSat 2026 ---"));
-  Serial.println(F("Iniciando Receptor ESP32..."));
+  // Serial.println(F("\n--- Estacion Terrena CanSat 2026 ---"));
+  // Serial.println(F("Iniciando Receptor ESP32..."));
 
   initLoRa();
 }
 
 // ================== INIT LORA ==================
 void initLoRa() {
-  Serial.print(F("[LoRa] Configurando... "));
+  // Serial.print(F("[LoRa] Configurando... "));
 
   int state = radio.begin(freq, bw, sf, cr, syncWord, power, preamble);
 
   if (state == RADIOLIB_ERR_NONE) {
-    Serial.println(F("Éxito!"));
+    // Serial.println(F("Éxito!"));
     currentMode = MODE_LORA;
   } else {
-    Serial.print(F("Error, código: "));
-    Serial.println(state);
+    // Serial.print(F("Error, código: "));
+    // Serial.println(state);
     while (true);
   }
 }
 
 // ================== INIT FSK ==================
 void initFSK() {
-  Serial.print(F("[FSK] Configurando... "));
+  // Serial.print(F("[FSK] Configurando... "));
 
   int state = radio.beginFSK(freq, 50.0, 50.0, 125.0, power, 16);
 
   if (state == RADIOLIB_ERR_NONE) {
-    Serial.println(F("Éxito!"));
+    // Serial.println(F("Éxito!"));
     currentMode = MODE_FSK;
   } else {
-    Serial.print(F("Error, código: "));
-    Serial.println(state);
+    // Serial.print(F("Error, código: "));
+    // Serial.println(state);
   }
 }
 
@@ -103,8 +103,6 @@ void loop() {
 
       if (packet.base.magic == 0xCA) {
         processPacket(packet);
-      } else {
-        Serial.println(F("Recibido paquete con Magic Byte incorrecto."));
       }
     } 
     else if (state == RADIOLIB_ERR_RX_TIMEOUT) {
@@ -112,13 +110,13 @@ void loop() {
     } 
     else if (state != RADIOLIB_ERR_SPI_WRITE_FAILED) {
       if (state == RADIOLIB_ERR_CRC_MISMATCH) {
-        Serial.println(F("Error de CRC en paquete recibido."));
+        // Serial.println(F("Error de CRC en paquete recibido."));
       }
     }
 
     // Timeout para cambio de modo
     if (millis() - lastPacketTime > 5000 && lastPacketTime != 0) {
-      Serial.println(F("\n>>> Sin telemetría LoRa. ¿Cambiar a FSK?"));
+      // Serial.println(F("\n>>> Sin telemetría LoRa. ¿Cambiar a FSK?"));
       // initFSK(); // opcional
     }
   } 
@@ -129,40 +127,31 @@ void loop() {
 
     if (state == RADIOLIB_ERR_NONE) {
       lastPacketTime = millis();
-      Serial.print((char)byteReceived);
+      Serial.write(byteReceived); // Reenviar binario en FSK también
     }
   }
 }
 
 // ================== PROCESAMIENTO ==================
 void processPacket(FullTelemetryPacket p) {
-  Serial.println(F("--- Paquete Recibido ---"));
-
-  Serial.print(F("ID: "));
-  Serial.println(p.base.pkt);
-
+  Serial.print(F("Pkt:")); Serial.println(p.base.pkt);
+  
   float temp = p.base.temperatura / 100.0;
-  Serial.print(F("Temp: "));
-  Serial.print(temp);
-  Serial.println(F(" C"));
+  Serial.print(F("Temp:")); Serial.println(temp);
 
-  Serial.print(F("Alt: "));
-  Serial.print(p.base.altitud);
-  Serial.println(F(" m"));
+  Serial.print(F("Alt:")); Serial.println(p.base.altitud);
 
-  Serial.print(F("Pres: "));
-  Serial.print(p.base.presion);
-  Serial.println(F(" hPa"));
+  Serial.print(F("Pres:")); Serial.println(p.base.presion);
 
-  Serial.print(F("IMU Accel: "));
-  Serial.print(p.bno.accel_x); Serial.print(F(", "));
-  Serial.print(p.bno.accel_y); Serial.print(F(", "));
+  Serial.print(F("Accel:")); 
+  Serial.print(p.bno.accel_x); Serial.print(F(","));
+  Serial.print(p.bno.accel_y); Serial.print(F(","));
   Serial.println(p.bno.accel_z);
 
-  Serial.print(F("IMU Giro: "));
-  Serial.print(p.bno.giro_x); Serial.print(F(", "));
-  Serial.print(p.bno.giro_y); Serial.print(F(", "));
+  Serial.print(F("Gyro:")); 
+  Serial.print(p.bno.giro_x); Serial.print(F(","));
+  Serial.print(p.bno.giro_y); Serial.print(F(","));
   Serial.println(p.bno.giro_z);
 
-  Serial.println(F("-----------------------"));
+  Serial.flush();
 }

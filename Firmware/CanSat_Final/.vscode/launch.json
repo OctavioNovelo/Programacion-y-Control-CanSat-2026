@@ -11,7 +11,7 @@
             "device": "STM32F411CE",
             "interface": "swd",
             "runToEntryPoint": "main",
-            "armToolchainPath": "/home/shuten-doji/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/",
+            "armToolchainPath": "/usr/bin",
             "liveWatch": {
                 "enabled": true,
                 "samplesPerSecond": 4
