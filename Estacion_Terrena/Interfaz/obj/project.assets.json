@@ -3114,11 +3114,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/archivos/model_eggs_ui.csproj",
+      "projectUniqueName": "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Estacion_Terrena/Interfaz/model_eggs_ui.csproj",
       "projectName": "model_eggs_ui",
-      "projectPath": "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/archivos/model_eggs_ui.csproj",
+      "projectPath": "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Estacion_Terrena/Interfaz/model_eggs_ui.csproj",
       "packagesPath": "/home/gashadokuro/.nuget/packages/",
-      "outputPath": "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/archivos/obj/",
+      "outputPath": "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Estacion_Terrena/Interfaz/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/gashadokuro/.nuget/NuGet/NuGet.Config"

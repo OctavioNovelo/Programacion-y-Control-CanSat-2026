@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("model_eggs_ui")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+610315af8bedf646906aca9d9e6f77e4b3e10359")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83494cfdbc6a28ac90e70cdc36cdd9d43b99147c")]
 [assembly: System.Reflection.AssemblyProductAttribute("model_eggs_ui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("model_eggs_ui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

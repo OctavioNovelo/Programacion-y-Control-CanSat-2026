@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/zeit/Documents/dev/embedded/model-eggs-cansat/ground_station/avalonia/model_eggs_ui/model_eggs_ui.csproj": {}
+    "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/ESP32_CAM/model_eggs_ui/model_eggs_ui.csproj": {}
   },
   "projects": {
-    "/home/zeit/Documents/dev/embedded/model-eggs-cansat/ground_station/avalonia/model_eggs_ui/model_eggs_ui.csproj": {
+    "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/ESP32_CAM/model_eggs_ui/model_eggs_ui.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/zeit/Documents/dev/embedded/model-eggs-cansat/ground_station/avalonia/model_eggs_ui/model_eggs_ui.csproj",
+        "projectUniqueName": "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/ESP32_CAM/model_eggs_ui/model_eggs_ui.csproj",
         "projectName": "model_eggs_ui",
-        "projectPath": "/home/zeit/Documents/dev/embedded/model-eggs-cansat/ground_station/avalonia/model_eggs_ui/model_eggs_ui.csproj",
-        "packagesPath": "/home/zeit/.nuget/packages/",
-        "outputPath": "/home/zeit/Documents/dev/embedded/model-eggs-cansat/ground_station/avalonia/model_eggs_ui/obj/",
+        "projectPath": "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/ESP32_CAM/model_eggs_ui/model_eggs_ui.csproj",
+        "packagesPath": "/home/gashadokuro/.nuget/packages/",
+        "outputPath": "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/ESP32_CAM/model_eggs_ui/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/zeit/.nuget/NuGet/NuGet.Config"
+          "/home/gashadokuro/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
