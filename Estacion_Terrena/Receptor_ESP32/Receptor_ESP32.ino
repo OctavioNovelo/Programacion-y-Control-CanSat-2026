@@ -49,16 +49,6 @@ uint8_t syncWord = 0x34;     // 🔥 FIX aquí
 int8_t power = 17;
 uint16_t preamble = 8;
 
-// ================== SETUP ==================
-void setup() {
-  Serial.begin(115200);
-  while (!Serial);
-
-  // Serial.println(F("\n--- Estacion Terrena CanSat 2026 ---"));
-  // Serial.println(F("Iniciando Receptor ESP32..."));
-
-  initLoRa();
-}
 
 // ================== INIT LORA ==================
 void initLoRa() {
@@ -74,6 +64,17 @@ void initLoRa() {
     // Serial.println(state);
     while (true);
   }
+}
+
+// ================== SETUP ==================
+void setup() {
+  Serial.begin(115200);
+  while (!Serial);
+
+  // Serial.println(F("\n--- Estacion Terrena CanSat 2026 ---"));
+  // Serial.println(F("Iniciando Receptor ESP32..."));
+
+  initLoRa();
 }
 
 // ================== INIT FSK ==================

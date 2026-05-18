@@ -84,7 +84,8 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(BNO_INT_GPIO_Port, &GPIO_InitStruct);
 
+}
+
 /* USER CODE BEGIN 2 */
 
 /* USER CODE END 2 */
-}
