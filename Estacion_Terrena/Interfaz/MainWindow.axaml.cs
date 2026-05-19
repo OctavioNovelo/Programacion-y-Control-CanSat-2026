@@ -37,7 +37,7 @@ public partial class MainWindow : Window
     private const byte MagicLoRa = 0xCA;
 
     // Serial Settings
-    private const string DefaultPortName = "/dev/ttyUSB0";
+    private const string DefaultPortName = "/dev/ttyACM0";
     private const int DefaultBaudRate = 115200;
     private const int SerialReconnectDelayMilliseconds = 2000;
 

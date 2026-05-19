@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/ESP32_CAM/model_eggs_ui/model_eggs_ui.csproj": {}
+    "/home/shuten-doji/Documents/Robotica/CanSat/Programacion-y-Control-CanSat-2026-/Firmware/ESP32_CAM/model_eggs_ui/model_eggs_ui.csproj": {}
   },
   "projects": {
-    "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/ESP32_CAM/model_eggs_ui/model_eggs_ui.csproj": {
+    "/home/shuten-doji/Documents/Robotica/CanSat/Programacion-y-Control-CanSat-2026-/Firmware/ESP32_CAM/model_eggs_ui/model_eggs_ui.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/ESP32_CAM/model_eggs_ui/model_eggs_ui.csproj",
+        "projectUniqueName": "/home/shuten-doji/Documents/Robotica/CanSat/Programacion-y-Control-CanSat-2026-/Firmware/ESP32_CAM/model_eggs_ui/model_eggs_ui.csproj",
         "projectName": "model_eggs_ui",
-        "projectPath": "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/ESP32_CAM/model_eggs_ui/model_eggs_ui.csproj",
-        "packagesPath": "/home/gashadokuro/.nuget/packages/",
-        "outputPath": "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/ESP32_CAM/model_eggs_ui/obj/",
+        "projectPath": "/home/shuten-doji/Documents/Robotica/CanSat/Programacion-y-Control-CanSat-2026-/Firmware/ESP32_CAM/model_eggs_ui/model_eggs_ui.csproj",
+        "packagesPath": "/home/shuten-doji/.nuget/packages/",
+        "outputPath": "/home/shuten-doji/Documents/Robotica/CanSat/Programacion-y-Control-CanSat-2026-/Firmware/ESP32_CAM/model_eggs_ui/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/gashadokuro/.nuget/NuGet/NuGet.Config"
+          "/home/shuten-doji/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"

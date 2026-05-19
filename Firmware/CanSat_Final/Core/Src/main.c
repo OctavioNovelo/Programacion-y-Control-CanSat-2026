@@ -26,7 +26,7 @@
 /* ---- Configuración de Rendimiento ---- */
 #define LORA_POWER_LEVEL    0x82            /* Potencia baja-media */
 #define LORA_INTERVAL_MS    1000            /* 1 Hz para estabilidad y debug */
-#define ALTITUD_DESPLIEGUE  1
+#define ALTITUD_DESPLIEGUE  300
              /* <--- CAMBIA ESTE VALOR PARA TUS PRUEBAS (30, 100, 200...) */
 
 /* USER CODE BEGIN PV */
@@ -258,7 +258,7 @@ int main(void)
                     /* --- LÓGICA DE DESPLIEGUE (Doble Confirmación) --- */
                     
                     // 1. Detectar que ya subimos (Armado del sistema)
-                    if (!subida_completada && altitude > (ALTITUD_DESPLIEGUE + 3)) {
+                    if (!subida_completada && altitude > (ALTITUD_DESPLIEGUE + 30)) {
                         subida_completada = 1; // Ya estamos arriba, ahora esperamos la bajada
                     }
 
