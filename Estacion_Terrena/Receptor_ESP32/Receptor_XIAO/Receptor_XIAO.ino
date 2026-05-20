@@ -15,10 +15,12 @@ SX1278 radio = new Module(5, 2, 14, 27);
 unsigned long t_azul = 0;
 unsigned long t_verde = 0;
 unsigned long t_rojo = 0;
+int si = 0;
 
 const int LED_OFF_MS = 500;
+// ====================================
 
-// ================== ESTRUCTURAS DE DATOS ==================
+// #pragma es para quitar los paddings
 #pragma pack(push, 1)
 typedef struct 
 {
@@ -49,16 +51,16 @@ typedef struct
 #pragma pack(pop)
 
 
-// ================== VARIABLES DE CONTROL GLOBALES ==================
+// ====================================
 volatile bool recibeFlag = false;
 unsigned long lastPacketTime = 0;
-
-// ================== FUNCIONES Y CALLBACKS ==================
+// ====================================
 
 // Callback de interrupción
 #if defined(ESP8266) || defined(ESP32)
   ICACHE_RAM_ATTR
 #endif
+
 void setFlag(void) {
   recibeFlag = true;
 }
@@ -98,7 +100,8 @@ void forwardToSerial(uint8_t header, uint8_t* buffer, size_t len) {
 void initLoRa() {
   int state = radio.begin(434.0, 125.0, 7, 5, 0x34, 17, 8);
 
-  if (state == RADIOLIB_ERR_NONE) {
+  if (state == RADIOLIB_ERR_NONE) 
+  {
     radio.setPacketReceivedAction(setFlag); // Vinculamos la interrupción
     radio.startReceive(); // Recibimos por LoRa
   } 
@@ -106,9 +109,14 @@ void initLoRa() {
   {
     while (true)
     {
+      // Todo sale mal
       digitalWrite(LED_ROJO, HIGH);
+      digitalWrite(LED_AZUL, HIGH);
+      digitalWrite(LED_VERDE, HIGH);
       delay(500);
       digitalWrite(LED_ROJO, LOW);
+      digitalWrite(LED_AZUL, LOW);
+      digitalWrite(LED_VERDE, LOW);
       delay(500);
     }  
   }
@@ -127,10 +135,10 @@ void recibe() {
     if (state == RADIOLIB_ERR_NONE) {
       lastPacketTime = millis();
 
-      digitalWrite(LED_ROJO, HIGH);
-      t_rojo = millis();
       
-      if (len == sizeof(FullTelemetryPacket)) {
+      if (len == sizeof(FullTelemetryPacket)) 
+      {
+        // Wizard time
         FullTelemetryPacket* pkg = (FullTelemetryPacket*)buffer;
 
         if (pkg->base.verificacion == 1)
@@ -143,12 +151,20 @@ void recibe() {
       } 
       else if (len <= 4) 
       {
-        digitalWrite(LED_VERDE, HIGH);
-        t_verde = millis();
+        si++;
+        if (si == 1)
+        {
+          digitalWrite(LED_ROJO, HIGH);
+          t_rojo = millis();
+        }
+        else
+        {
+          digitalWrite(LED_VERDE, HIGH);
+          t_verde = millis();
+        }
         forwardToSerial(HEADER_DESCENT_STATUS, buffer, len);
       }
     }
-    
     // Volver a poner el radio en modo recepción
     radio.startReceive(); 
   }
@@ -175,10 +191,5 @@ void loop()
   if (now - t_azul >= LED_OFF_MS){
     digitalWrite(LED_AZUL, LOW);
   }
-  if (now - t_verde >= LED_OFF_MS){
-    digitalWrite(LED_VERDE, LOW);
-  }
-  if (now - t_rojo >= 100){
-    digitalWrite(LED_ROJO, LOW);
-  }
+
 }

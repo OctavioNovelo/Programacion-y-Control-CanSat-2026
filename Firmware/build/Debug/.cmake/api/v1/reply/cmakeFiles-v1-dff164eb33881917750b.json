@@ -1,0 +1,124 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/Debug/CMakeFiles/4.2.3/CMakeSystem.cmake"
+		},
+		{
+			"path" : "cmake/gcc-arm-none-eabi.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/Debug/CMakeFiles/4.2.3/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/Debug/CMakeFiles/4.2.3/CMakeASMCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/Platform/Generic.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/Platform/Generic.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/Internal/CMakeCLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/CMakeASMInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/Compiler/GNU-ASM.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/share/cmake-4.2/Modules/Internal/CMakeASMLinkerInformation.cmake"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/build/Debug",
+		"source" : "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 1
+	}
+}
