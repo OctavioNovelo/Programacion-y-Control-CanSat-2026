@@ -44,7 +44,7 @@ TELEMETRY (STM32 --> SX1278:SX1278 --> ESP32 XIAO SENSE):
 
 ### Funcionamiento el sistema
 1. **Telemetría LoRa:** Envío continuo de estado de sensores.
-2. **Recepcion de Imagen:** La UI permite solicitar mediante la base terrena (master) a las camaras (slave:slave) la captura de la imagen, para posteriormente (quiero entender exactamente como funciona el pedo de la imagen) su envio a la base terrena.
+2. **Recepcion de Imagen:** La UI permite solicitar mediante la base terrena (master) a las camaras (slave:slave) la captura de la imagen. La base manda una peticion a las camaras para conectarse, si por alguna razon NO se conectan, la base sigue mandando la misma peticion hasta recibir el paquete correspondiente y asi con cada paquete de imagen.
 3. **Sistema de liberacion:** A los 300m de altitud, se envía a base terrena una alerta de trigger. Durante el descenso, a los 300m el sistema de liberacion levanta el pin del supercapacitor libreando las helices. 
 
 
