@@ -27,6 +27,7 @@ static void cs_high()
     HAL_GPIO_WritePin(SX1278_CS_PORT, SX1278_CS_PIN, GPIO_PIN_SET);
 }
 
+// Aqui escribimos el buffer
 void sx1278_write(uint8_t reg, uint8_t value)
 {
     uint8_t buffer[2];
@@ -39,6 +40,7 @@ void sx1278_write(uint8_t reg, uint8_t value)
     cs_high();
 }
 
+// Aqui leemos ? 
 uint8_t sx1278_read(uint8_t reg)
 {
     uint8_t tx = reg & 0x7F;
@@ -52,6 +54,7 @@ uint8_t sx1278_read(uint8_t reg)
     return rx;
 }
 
+// Funcion para resetear el sx1278
 void sx1278_reset()
 {
     HAL_GPIO_WritePin(SX1278_RESET_PORT, SX1278_RESET_PIN, GPIO_PIN_RESET);
@@ -61,6 +64,7 @@ void sx1278_reset()
     HAL_Delay(10);
 }
 
+// Fncion para inicializar el sx1278
 void sx1278_init()
 {
     sx1278_reset();
@@ -107,6 +111,7 @@ void sx1278_init()
     sx1278_write(0x0F, 0x00); // RX base addr
 }
 
+// Funcion para enviar atravez de LoRa
 void sx1278_send(uint8_t *data, uint16_t len)
 {
     sx1278_tx_done = 0;
@@ -130,6 +135,7 @@ void sx1278_send(uint8_t *data, uint16_t len)
     // modo TX
     sx1278_write(0x01, 0x83);
 }
+
 
 void sx1278_onDio0Irq(void)
 {

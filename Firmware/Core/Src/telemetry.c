@@ -9,6 +9,7 @@
 
 static uint8_t pkt = 0;
 
+// Checksum, la verdad no se exactamente para que lo estoy usando.
 static uint8_t telemetry_checksum(uint8_t *data, uint8_t len)
 {
     uint8_t c = 0;
@@ -19,7 +20,7 @@ static uint8_t telemetry_checksum(uint8_t *data, uint8_t len)
     return c;
 }
 
-
+// Aqui contruimos el paquete de telemetria LoRa
 void telemetry_build_LoRa(TelemetryPacketLoRa *protocolLoRa, int16_t temperatura, uint16_t altitud, uint16_t presion, uint8_t verificacion)
 {
 	protocolLoRa->magic = 0xCA;
@@ -31,7 +32,7 @@ void telemetry_build_LoRa(TelemetryPacketLoRa *protocolLoRa, int16_t temperatura
 	protocolLoRa->checksum = telemetry_checksum((uint8_t*)protocolLoRa, sizeof(TelemetryPacketLoRa) - 1);
 }
 
-// Juntar con telemetry_build_LoRa
+// Aqui se contruye el paquete de telemetria LoRa
 void telemetry_LoRa_BNO(PacketLoRaBNO *telemetryBNO, float accel_x, float accel_y, float accel_z, float gyro_x, float gyro_y, float gyro_z)
 {
 	telemetryBNO->accel_x = accel_x;
