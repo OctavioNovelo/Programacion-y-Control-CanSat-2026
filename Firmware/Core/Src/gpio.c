@@ -50,16 +50,16 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, PIN_CAMARAS_Pin|LED_ROJO_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(PIN_CAMARAS_GPIO_Port, PIN_CAMARAS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LORA_RST_Pin|LORA_NSS_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOA, LORA_RST_Pin|LORA_NSS_Pin|LED_ROJO_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LED_VERDE_Pin|LED_AZUL_Pin|PIN_LIBERACION_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, LED_VERDE_Pin|LED_AZUL_Pin|BNO_RST_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(BNO_RST_GPIO_Port, BNO_RST_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(PIN_LIBERACION_GPIO_Port, PIN_LIBERACION_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : PIN_CAMARAS_Pin LORA_RST_Pin LORA_NSS_Pin LED_ROJO_Pin */
   GPIO_InitStruct.Pin = PIN_CAMARAS_Pin|LORA_RST_Pin|LORA_NSS_Pin|LED_ROJO_Pin;

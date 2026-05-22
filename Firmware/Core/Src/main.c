@@ -224,6 +224,10 @@ int main(void)
     MX_I2C1_Init();
     MX_SPI1_Init();
 
+    HAL_GPIO_WritePin(GPIOA, LED_ROJO_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOB, LED_VERDE_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOB, LED_AZUL_Pin, GPIO_PIN_RESET);
+
     // Este maldito blink es el de la placa
     /* Blink rápido de vida */
     for(int i = 0; i < 6; i++) 
@@ -294,7 +298,7 @@ int main(void)
                 uint32_t p_final = BME280_compensate_P_int64(p_raw);
 
                 temperature = t_final;    /* En 0.01 degC */
-                pressure = p_final * 100; /* En KPa */
+                pressure = p_final / 1000; /* En KPa */
 
                 if (!is_calibrated && p_final > 0) 
                 { 
@@ -329,7 +333,7 @@ int main(void)
                             if (confirmaciones_altitud >= 5) // ~500ms de confirmación estable
                             { 
                                 HAL_GPIO_WritePin(GPIOB, PIN_LIBERACION_Pin, GPIO_PIN_SET);
-                                HAL_GPIO_WritePin(GPIOB, LED_ROJO_Pin, GPIO_PIN_SET);
+                                HAL_GPIO_WritePin(GPIOA, LED_ROJO_Pin, GPIO_PIN_SET);
                                 trigger_activado = 1;
                                 liberacion_en_progreso = 1;
                                 t_inicio_liberacion = HAL_GetTick();

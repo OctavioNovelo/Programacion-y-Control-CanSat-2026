@@ -53,7 +53,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/main.c.obj: C_COMPILER__CanSat_Final_
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/main.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -63,7 +63,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/gpio.c.obj: C_COMPILER__CanSat_Final_
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/gpio.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -73,7 +73,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/crc.c.obj: C_COMPILER__CanSat_Final_u
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/crc.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -83,7 +83,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/i2c.c.obj: C_COMPILER__CanSat_Final_u
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/i2c.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -93,7 +93,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/spi.c.obj: C_COMPILER__CanSat_Final_u
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/spi.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -103,7 +103,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/usart.c.obj: C_COMPILER__CanSat_Final
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/usart.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -113,7 +113,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj: C_COMPILER__CanSa
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -123,7 +123,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_hal_msp.c.obj: C_COMPILER__
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_hal_msp.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -133,7 +133,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/sysmem.c.obj: C_COMPILER__CanSat_Fina
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/sysmem.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -143,7 +143,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/syscalls.c.obj: C_COMPILER__CanSat_Fi
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/syscalls.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -153,7 +153,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/euler.c.obj: C_COMPILER__CanSat_Final
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/euler.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -163,7 +163,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj: C_COMPILER__Ca
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -173,7 +173,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/sh2_util.c.obj: C_COMPILER__CanSat_Fi
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/sh2_util.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -183,7 +183,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj: C_COMPILER__CanSat_Final_u
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -193,7 +193,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj: C_COMPILER__CanSat_Final_
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -203,7 +203,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj: C_COMPILER__CanSat_Fina
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -213,7 +213,7 @@ build CMakeFiles/CanSat_Final.dir/Core/Src/telemetry.c.obj: C_COMPILER__CanSat_F
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/Core/Src/telemetry.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir/Core/Src
@@ -223,7 +223,7 @@ build CMakeFiles/CanSat_Final.dir/startup_stm32f411xe.s.obj: ASM_COMPILER__CanSa
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/CanSat_Final.dir/startup_stm32f411xe.s.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g -g3 -O0
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g -g3 -O0
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
   OBJECT_FILE_DIR = CMakeFiles/CanSat_Final.dir
@@ -239,7 +239,7 @@ build CMakeFiles/CanSat_Final.dir/startup_stm32f411xe.s.obj: ASM_COMPILER__CanSa
 
 build CanSat_Final.elf: C_EXECUTABLE_LINKER__CanSat_Final_Debug CMakeFiles/CanSat_Final.dir/Core/Src/main.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/gpio.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/crc.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/i2c.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/spi.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/usart.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_hal_msp.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/sysmem.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/syscalls.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/euler.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/sh2_util.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj CMakeFiles/CanSat_Final.dir/Core/Src/telemetry.c.obj CMakeFiles/CanSat_Final.dir/startup_stm32f411xe.s.obj | libSTM32_Drivers.a || libSTM32_Drivers.a
   CONFIG = Debug
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   LINK_FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T "/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/STM32F411XX_FLASH.ld" --specs=nano.specs -Wl,-Map=CanSat_Final.map -Wl,--gc-sections -Wl,--print-memory-usage
   LINK_LIBRARIES = libSTM32_Drivers.a  -lm
   OBJECT_DIR = CMakeFiles/CanSat_Final.dir
@@ -262,7 +262,7 @@ build CMakeFiles/STM32_Drivers.dir/Core/Src/system_stm32f4xx.c.obj: C_COMPILER__
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Core/Src/system_stm32f4xx.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Core/Src
@@ -272,7 +272,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -282,7 +282,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -292,7 +292,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -302,7 +302,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -312,7 +312,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -322,7 +322,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -332,7 +332,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -342,7 +342,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -352,7 +352,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -362,7 +362,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -372,7 +372,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -382,7 +382,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -392,7 +392,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -402,7 +402,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -412,7 +412,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -422,7 +422,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -432,7 +432,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -442,7 +442,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj.d
-  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   INCLUDES = -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src
@@ -458,7 +458,7 @@ build CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
 
 build libSTM32_Drivers.a: C_STATIC_LIBRARY_LINKER__STM32_Drivers_Debug CMakeFiles/STM32_Drivers.dir/Core/Src/system_stm32f4xx.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj CMakeFiles/STM32_Drivers.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
   CONFIG = Debug
-  LANGUAGE_COMPILE_FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
+  LANGUAGE_COMPILE_FLAGS = -Wall -Wextra -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3
   OBJECT_DIR = CMakeFiles/STM32_Drivers.dir
   POST_BUILD = :
   PRE_LINK = :

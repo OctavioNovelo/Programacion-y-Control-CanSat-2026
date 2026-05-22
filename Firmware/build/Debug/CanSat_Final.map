@@ -3691,7 +3691,7 @@ LOAD /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1
                 0x08000000                g_pfnVectors
                 0x08000198                        . = ALIGN (0x4)
 
-.text           0x08000198     0x7cac
+.text           0x08000198     0x7cdc
                 0x08000198                        . = ALIGN (0x4)
  *(.text)
  .text          0x08000198       0x40 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -3735,560 +3735,560 @@ LOAD /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1
                 0x08000e08                HAL_GPIO_EXTI_Callback
  .text.lora_fast_init
                 0x08000e4c       0x3c CMakeFiles/CanSat_Final.dir/Core/Src/main.c.obj
- .text.main     0x08000e88      0x4c4 CMakeFiles/CanSat_Final.dir/Core/Src/main.c.obj
+ .text.main     0x08000e88      0x4f4 CMakeFiles/CanSat_Final.dir/Core/Src/main.c.obj
                 0x08000e88                main
  .text.lora_send_async
-                0x0800134c       0xb8 CMakeFiles/CanSat_Final.dir/Core/Src/main.c.obj
+                0x0800137c       0xb8 CMakeFiles/CanSat_Final.dir/Core/Src/main.c.obj
  .text.SystemClock_Config
-                0x08001404       0xd0 CMakeFiles/CanSat_Final.dir/Core/Src/main.c.obj
-                0x08001404                SystemClock_Config
+                0x08001434       0xd0 CMakeFiles/CanSat_Final.dir/Core/Src/main.c.obj
+                0x08001434                SystemClock_Config
  .text.Error_Handler
-                0x080014d4        0x8 CMakeFiles/CanSat_Final.dir/Core/Src/main.c.obj
-                0x080014d4                Error_Handler
+                0x08001504        0x8 CMakeFiles/CanSat_Final.dir/Core/Src/main.c.obj
+                0x08001504                Error_Handler
  .text.MX_GPIO_Init
-                0x080014dc      0x11c CMakeFiles/CanSat_Final.dir/Core/Src/gpio.c.obj
-                0x080014dc                MX_GPIO_Init
+                0x0800150c      0x11c CMakeFiles/CanSat_Final.dir/Core/Src/gpio.c.obj
+                0x0800150c                MX_GPIO_Init
  .text.MX_I2C1_Init
-                0x080015f8       0x5c CMakeFiles/CanSat_Final.dir/Core/Src/i2c.c.obj
-                0x080015f8                MX_I2C1_Init
+                0x08001628       0x5c CMakeFiles/CanSat_Final.dir/Core/Src/i2c.c.obj
+                0x08001628                MX_I2C1_Init
  .text.HAL_I2C_MspInit
-                0x08001654       0x90 CMakeFiles/CanSat_Final.dir/Core/Src/i2c.c.obj
-                0x08001654                HAL_I2C_MspInit
+                0x08001684       0x90 CMakeFiles/CanSat_Final.dir/Core/Src/i2c.c.obj
+                0x08001684                HAL_I2C_MspInit
  .text.MX_SPI1_Init
-                0x080016e4       0x6c CMakeFiles/CanSat_Final.dir/Core/Src/spi.c.obj
-                0x080016e4                MX_SPI1_Init
+                0x08001714       0x6c CMakeFiles/CanSat_Final.dir/Core/Src/spi.c.obj
+                0x08001714                MX_SPI1_Init
  .text.HAL_SPI_MspInit
-                0x08001750       0x90 CMakeFiles/CanSat_Final.dir/Core/Src/spi.c.obj
-                0x08001750                HAL_SPI_MspInit
+                0x08001780       0x90 CMakeFiles/CanSat_Final.dir/Core/Src/spi.c.obj
+                0x08001780                HAL_SPI_MspInit
  .text.NMI_Handler
-                0x080017e0        0x8 CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
-                0x080017e0                NMI_Handler
+                0x08001810        0x8 CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001810                NMI_Handler
  .text.HardFault_Handler
-                0x080017e8        0x8 CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
-                0x080017e8                HardFault_Handler
+                0x08001818        0x8 CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001818                HardFault_Handler
  .text.MemManage_Handler
-                0x080017f0        0x8 CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
-                0x080017f0                MemManage_Handler
+                0x08001820        0x8 CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001820                MemManage_Handler
  .text.BusFault_Handler
-                0x080017f8        0x8 CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
-                0x080017f8                BusFault_Handler
+                0x08001828        0x8 CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001828                BusFault_Handler
  .text.UsageFault_Handler
-                0x08001800        0x8 CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08001800                UsageFault_Handler
+                0x08001830        0x8 CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001830                UsageFault_Handler
  .text.SVC_Handler
-                0x08001808        0xe CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08001808                SVC_Handler
+                0x08001838        0xe CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001838                SVC_Handler
  .text.DebugMon_Handler
-                0x08001816        0xe CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08001816                DebugMon_Handler
+                0x08001846        0xe CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001846                DebugMon_Handler
  .text.PendSV_Handler
-                0x08001824        0xe CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08001824                PendSV_Handler
+                0x08001854        0xe CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001854                PendSV_Handler
  .text.SysTick_Handler
-                0x08001832        0xc CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08001832                SysTick_Handler
+                0x08001862        0xc CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08001862                SysTick_Handler
  .text.EXTI1_IRQHandler
-                0x0800183e        0xe CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
-                0x0800183e                EXTI1_IRQHandler
+                0x0800186e        0xe CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0800186e                EXTI1_IRQHandler
  .text.EXTI9_5_IRQHandler
-                0x0800184c       0x10 CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
-                0x0800184c                EXTI9_5_IRQHandler
+                0x0800187c       0x10 CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0800187c                EXTI9_5_IRQHandler
  .text.HAL_MspInit
-                0x0800185c       0x50 CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x0800185c                HAL_MspInit
+                0x0800188c       0x50 CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x0800188c                HAL_MspInit
  .text.sh2_decodeSensorEvent
-                0x080018ac      0x318 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
-                0x080018ac                sh2_decodeSensorEvent
+                0x080018dc      0x318 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x080018dc                sh2_decodeSensorEvent
  .text.decodeRawAccelerometer
-                0x08001bc4       0x5c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08001bf4       0x5c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeAccelerometer
-                0x08001c20       0x80 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08001c50       0x80 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeLinearAcceleration
-                0x08001ca0       0x80 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08001cd0       0x80 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeGravity
-                0x08001d20       0x80 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08001d50       0x80 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeRawGyroscope
-                0x08001da0       0x6e CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
- *fill*         0x08001e0e        0x2 
+                0x08001dd0       0x6e CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+ *fill*         0x08001e3e        0x2 
  .text.decodeGyroscopeCalibrated
-                0x08001e10       0x80 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08001e40       0x80 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeGyroscopeUncal
-                0x08001e90       0xe4 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08001ec0       0xe4 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeRawMagnetometer
-                0x08001f74       0x5c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08001fa4       0x5c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeMagneticFieldCalibrated
-                0x08001fd0       0x80 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08002000       0x80 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeMagneticFieldUncal
-                0x08002050       0xe4 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08002080       0xe4 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeRotationVector
-                0x08002134       0xc8 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08002164       0xc8 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeGameRotationVector
-                0x080021fc       0xa0 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x0800222c       0xa0 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeGeomagneticRotationVector
-                0x0800229c       0xc8 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x080022cc       0xc8 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodePressure
-                0x08002364       0x38 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08002394       0x38 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeAmbientLight
-                0x0800239c       0x38 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x080023cc       0x38 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeHumidity
-                0x080023d4       0x3c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08002404       0x3c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeProximity
-                0x08002410       0x3c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08002440       0x3c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeTemperature
-                0x0800244c       0x3c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x0800247c       0x3c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeReserved
-                0x08002488       0x3c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x080024b8       0x3c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeTapDetector
-                0x080024c4       0x20 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x080024f4       0x20 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeStepDetector
-                0x080024e4       0x24 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08002514       0x24 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeStepCounter
-                0x08002508       0x36 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08002538       0x36 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeSignificantMotion
-                0x0800253e       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x0800256e       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeStabilityClassifier
-                0x08002564       0x20 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08002594       0x20 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeShakeDetector
-                0x08002584       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x080025b4       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeFlipDetector
-                0x080025aa       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x080025da       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodePickupDetector
-                0x080025d0       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08002600       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeStabilityDetector
-                0x080025f6       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08002626       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodePersonalActivityClassifier
-                0x0800261c       0x66 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x0800264c       0x66 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeSleepDetector
-                0x08002682       0x20 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x080026b2       0x20 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeTiltDetector
-                0x080026a2       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x080026d2       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodePocketDetector
-                0x080026c8       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x080026f8       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeCircleDetector
-                0x080026ee       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x0800271e       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeHeartRateMonitor
-                0x08002714       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
- *fill*         0x0800273a        0x2 
+                0x08002744       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+ *fill*         0x0800276a        0x2 
  .text.decodeArvrStabilizedRV
-                0x0800273c       0xc8 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x0800276c       0xc8 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeArvrStabilizedGRV
-                0x08002804       0xa0 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08002834       0xa0 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeGyroIntegratedRV
-                0x080028a4      0x10c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x080028d4      0x10c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeIZroRequest
-                0x080029b0       0x28 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x080029e0       0x28 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeRawOptFlow
-                0x080029d8       0xfa CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
- *fill*         0x08002ad2        0x2 
+                0x08002a08       0xfa CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+ *fill*         0x08002b02        0x2 
  .text.decodeDeadReckoningPose
-                0x08002ad4      0x1d4 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+                0x08002b04      0x1d4 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
  .text.decodeWheelEncoder
-                0x08002ca8       0x5c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
- .text.readu16  0x08002d04       0x2e CMakeFiles/CanSat_Final.dir/Core/Src/sh2_util.c.obj
-                0x08002d04                readu16
- .text.readu32  0x08002d32       0x3c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_util.c.obj
-                0x08002d32                readu32
- .text.read8    0x08002d6e       0x1e CMakeFiles/CanSat_Final.dir/Core/Src/sh2_util.c.obj
-                0x08002d6e                read8
- .text.read16   0x08002d8c       0x2e CMakeFiles/CanSat_Final.dir/Core/Src/sh2_util.c.obj
-                0x08002d8c                read16
- .text.read32   0x08002dba       0x3c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_util.c.obj
-                0x08002dba                read32
- .text.opStart  0x08002df6       0x4a CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
- .text.opRx     0x08002e40       0x36 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x08002cd8       0x5c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+ .text.readu16  0x08002d34       0x2e CMakeFiles/CanSat_Final.dir/Core/Src/sh2_util.c.obj
+                0x08002d34                readu16
+ .text.readu32  0x08002d62       0x3c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_util.c.obj
+                0x08002d62                readu32
+ .text.read8    0x08002d9e       0x1e CMakeFiles/CanSat_Final.dir/Core/Src/sh2_util.c.obj
+                0x08002d9e                read8
+ .text.read16   0x08002dbc       0x2e CMakeFiles/CanSat_Final.dir/Core/Src/sh2_util.c.obj
+                0x08002dbc                read16
+ .text.read32   0x08002dea       0x3c CMakeFiles/CanSat_Final.dir/Core/Src/sh2_util.c.obj
+                0x08002dea                read32
+ .text.opStart  0x08002e26       0x4a CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+ .text.opRx     0x08002e70       0x36 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
  .text.opCompleted
-                0x08002e76       0x24 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x08002ea6       0x24 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
  .text.opOnReset
-                0x08002e9a       0x38 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
- *fill*         0x08002ed2        0x2 
+                0x08002eca       0x38 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+ *fill*         0x08002f02        0x2 
  .text.getReportLen
-                0x08002ed4       0x48 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x08002f04       0x48 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
  .text.sensorhubControlHdlr
-                0x08002f1c      0x15c CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x08002f4c      0x15c CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
  .text.opProcess
-                0x08003078       0xa8 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x080030a8       0xa8 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
  .text.touSTimestamp
-                0x08003120       0x88 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x08003150       0x88 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
  .text.sensorhubInputHdlr
-                0x080031a8      0x160 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x080031d8      0x160 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
  .text.sensorhubInputNormalHdlr
-                0x08003308       0x28 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x08003338       0x28 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
  .text.sensorhubInputWakeHdlr
-                0x08003330       0x28 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x08003360       0x28 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
  .text.sensorhubInputGyroRvHdlr
-                0x08003358       0xa2 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
- *fill*         0x080033fa        0x2 
+                0x08003388       0xa2 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+ *fill*         0x0800342a        0x2 
  .text.executableDeviceHdlr
-                0x080033fc       0x78 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x0800342c       0x78 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
  .text.sendCtrl
-                0x08003474       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x080034a4       0x26 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
  .text.setSensorConfigStart
-                0x0800349a       0xda CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x080034ca       0xda CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
  .text.shtpEventCallback
-                0x08003574       0x44 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x080035a4       0x44 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
  .text.sh2_open
-                0x080035b8      0x134 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
-                0x080035b8                sh2_open
+                0x080035e8      0x134 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x080035e8                sh2_open
  .text.sh2_service
-                0x080036ec       0x28 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
-                0x080036ec                sh2_service
+                0x0800371c       0x28 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x0800371c                sh2_service
  .text.sh2_setSensorCallback
-                0x08003714       0x2c CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
-                0x08003714                sh2_setSensorCallback
+                0x08003744       0x2c CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x08003744                sh2_setSensorCallback
  .text.sh2_setSensorConfig
-                0x08003740       0x54 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
-                0x08003740                sh2_setSensorConfig
+                0x08003770       0x54 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x08003770                sh2_setSensorConfig
  .text.shtp_init
-                0x08003794       0x44 CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
+                0x080037c4       0x44 CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
  .text.getInstance
-                0x080037d8       0x50 CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
- .text.min_u16  0x08003828       0x2a CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
+                0x08003808       0x50 CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
+ .text.min_u16  0x08003858       0x2a CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
  .text.txProcess
-                0x08003852      0x12a CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
+                0x08003882      0x12a CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
  .text.rxAssemble
-                0x0800397c      0x2bc CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
+                0x080039ac      0x2bc CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
  .text.shtp_open
-                0x08003c38       0x68 CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
-                0x08003c38                shtp_open
+                0x08003c68       0x68 CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
+                0x08003c68                shtp_open
  .text.shtp_setEventCallback
-                0x08003ca0       0x28 CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
-                0x08003ca0                shtp_setEventCallback
+                0x08003cd0       0x28 CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
+                0x08003cd0                shtp_setEventCallback
  .text.shtp_listenChan
-                0x08003cc8       0x60 CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
-                0x08003cc8                shtp_listenChan
+                0x08003cf8       0x60 CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
+                0x08003cf8                shtp_listenChan
  .text.shtp_send
-                0x08003d28       0x62 CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
-                0x08003d28                shtp_send
+                0x08003d58       0x62 CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
+                0x08003d58                shtp_send
  .text.shtp_service
-                0x08003d8a       0x4c CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
-                0x08003d8a                shtp_service
- *fill*         0x08003dd6        0x2 
- .text.cs_low   0x08003dd8       0x18 CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
- .text.cs_high  0x08003df0       0x18 CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
+                0x08003dba       0x4c CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
+                0x08003dba                shtp_service
+ *fill*         0x08003e06        0x2 
+ .text.cs_low   0x08003e08       0x18 CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
+ .text.cs_high  0x08003e20       0x18 CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
  .text.sx1278_write
-                0x08003e08       0x40 CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
-                0x08003e08                sx1278_write
+                0x08003e38       0x40 CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
+                0x08003e38                sx1278_write
  .text.sx1278_read
-                0x08003e48       0x48 CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
-                0x08003e48                sx1278_read
+                0x08003e78       0x48 CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
+                0x08003e78                sx1278_read
  .text.sx1278_reset
-                0x08003e90       0x2c CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
-                0x08003e90                sx1278_reset
+                0x08003ec0       0x2c CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
+                0x08003ec0                sx1278_reset
  .text.sx1278_init
-                0x08003ebc       0x9a CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
-                0x08003ebc                sx1278_init
- *fill*         0x08003f56        0x2 
+                0x08003eec       0x9a CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
+                0x08003eec                sx1278_init
+ *fill*         0x08003f86        0x2 
  .text.sx1278_send
-                0x08003f58       0x70 CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
-                0x08003f58                sx1278_send
+                0x08003f88       0x70 CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
+                0x08003f88                sx1278_send
  .text.telemetry_build_LoRa
-                0x08003fc8       0x64 CMakeFiles/CanSat_Final.dir/Core/Src/telemetry.c.obj
-                0x08003fc8                telemetry_build_LoRa
+                0x08003ff8       0x64 CMakeFiles/CanSat_Final.dir/Core/Src/telemetry.c.obj
+                0x08003ff8                telemetry_build_LoRa
  .text.Reset_Handler
-                0x0800402c       0x50 CMakeFiles/CanSat_Final.dir/startup_stm32f411xe.s.obj
-                0x0800402c                Reset_Handler
+                0x0800405c       0x50 CMakeFiles/CanSat_Final.dir/startup_stm32f411xe.s.obj
+                0x0800405c                Reset_Handler
  .text.Default_Handler
-                0x0800407c        0x2 CMakeFiles/CanSat_Final.dir/startup_stm32f411xe.s.obj
-                0x0800407c                RTC_Alarm_IRQHandler
-                0x0800407c                EXTI2_IRQHandler
-                0x0800407c                SPI4_IRQHandler
-                0x0800407c                TIM1_CC_IRQHandler
-                0x0800407c                DMA2_Stream5_IRQHandler
-                0x0800407c                DMA1_Stream5_IRQHandler
-                0x0800407c                PVD_IRQHandler
-                0x0800407c                SDIO_IRQHandler
-                0x0800407c                TAMP_STAMP_IRQHandler
-                0x0800407c                EXTI3_IRQHandler
-                0x0800407c                TIM1_UP_TIM10_IRQHandler
-                0x0800407c                I2C3_ER_IRQHandler
-                0x0800407c                EXTI0_IRQHandler
-                0x0800407c                I2C2_EV_IRQHandler
-                0x0800407c                DMA1_Stream2_IRQHandler
-                0x0800407c                FPU_IRQHandler
-                0x0800407c                DMA2_Stream2_IRQHandler
-                0x0800407c                SPI1_IRQHandler
-                0x0800407c                TIM1_BRK_TIM9_IRQHandler
-                0x0800407c                DMA2_Stream3_IRQHandler
-                0x0800407c                USART6_IRQHandler
-                0x0800407c                DMA2_Stream0_IRQHandler
-                0x0800407c                TIM4_IRQHandler
-                0x0800407c                I2C1_EV_IRQHandler
-                0x0800407c                DMA1_Stream6_IRQHandler
-                0x0800407c                DMA1_Stream1_IRQHandler
-                0x0800407c                TIM3_IRQHandler
-                0x0800407c                RCC_IRQHandler
-                0x0800407c                Default_Handler
-                0x0800407c                EXTI15_10_IRQHandler
-                0x0800407c                ADC_IRQHandler
-                0x0800407c                DMA1_Stream7_IRQHandler
-                0x0800407c                SPI5_IRQHandler
-                0x0800407c                TIM5_IRQHandler
-                0x0800407c                DMA2_Stream7_IRQHandler
-                0x0800407c                I2C3_EV_IRQHandler
-                0x0800407c                RTC_WKUP_IRQHandler
-                0x0800407c                SPI2_IRQHandler
-                0x0800407c                DMA1_Stream0_IRQHandler
-                0x0800407c                EXTI4_IRQHandler
-                0x0800407c                WWDG_IRQHandler
-                0x0800407c                TIM2_IRQHandler
-                0x0800407c                OTG_FS_WKUP_IRQHandler
-                0x0800407c                TIM1_TRG_COM_TIM11_IRQHandler
-                0x0800407c                USART2_IRQHandler
-                0x0800407c                I2C2_ER_IRQHandler
-                0x0800407c                DMA2_Stream1_IRQHandler
-                0x0800407c                FLASH_IRQHandler
-                0x0800407c                DMA2_Stream4_IRQHandler
-                0x0800407c                USART1_IRQHandler
-                0x0800407c                OTG_FS_IRQHandler
-                0x0800407c                SPI3_IRQHandler
-                0x0800407c                DMA1_Stream4_IRQHandler
-                0x0800407c                I2C1_ER_IRQHandler
-                0x0800407c                DMA2_Stream6_IRQHandler
-                0x0800407c                DMA1_Stream3_IRQHandler
- *fill*         0x0800407e        0x2 
+                0x080040ac        0x2 CMakeFiles/CanSat_Final.dir/startup_stm32f411xe.s.obj
+                0x080040ac                RTC_Alarm_IRQHandler
+                0x080040ac                EXTI2_IRQHandler
+                0x080040ac                SPI4_IRQHandler
+                0x080040ac                TIM1_CC_IRQHandler
+                0x080040ac                DMA2_Stream5_IRQHandler
+                0x080040ac                DMA1_Stream5_IRQHandler
+                0x080040ac                PVD_IRQHandler
+                0x080040ac                SDIO_IRQHandler
+                0x080040ac                TAMP_STAMP_IRQHandler
+                0x080040ac                EXTI3_IRQHandler
+                0x080040ac                TIM1_UP_TIM10_IRQHandler
+                0x080040ac                I2C3_ER_IRQHandler
+                0x080040ac                EXTI0_IRQHandler
+                0x080040ac                I2C2_EV_IRQHandler
+                0x080040ac                DMA1_Stream2_IRQHandler
+                0x080040ac                FPU_IRQHandler
+                0x080040ac                DMA2_Stream2_IRQHandler
+                0x080040ac                SPI1_IRQHandler
+                0x080040ac                TIM1_BRK_TIM9_IRQHandler
+                0x080040ac                DMA2_Stream3_IRQHandler
+                0x080040ac                USART6_IRQHandler
+                0x080040ac                DMA2_Stream0_IRQHandler
+                0x080040ac                TIM4_IRQHandler
+                0x080040ac                I2C1_EV_IRQHandler
+                0x080040ac                DMA1_Stream6_IRQHandler
+                0x080040ac                DMA1_Stream1_IRQHandler
+                0x080040ac                TIM3_IRQHandler
+                0x080040ac                RCC_IRQHandler
+                0x080040ac                Default_Handler
+                0x080040ac                EXTI15_10_IRQHandler
+                0x080040ac                ADC_IRQHandler
+                0x080040ac                DMA1_Stream7_IRQHandler
+                0x080040ac                SPI5_IRQHandler
+                0x080040ac                TIM5_IRQHandler
+                0x080040ac                DMA2_Stream7_IRQHandler
+                0x080040ac                I2C3_EV_IRQHandler
+                0x080040ac                RTC_WKUP_IRQHandler
+                0x080040ac                SPI2_IRQHandler
+                0x080040ac                DMA1_Stream0_IRQHandler
+                0x080040ac                EXTI4_IRQHandler
+                0x080040ac                WWDG_IRQHandler
+                0x080040ac                TIM2_IRQHandler
+                0x080040ac                OTG_FS_WKUP_IRQHandler
+                0x080040ac                TIM1_TRG_COM_TIM11_IRQHandler
+                0x080040ac                USART2_IRQHandler
+                0x080040ac                I2C2_ER_IRQHandler
+                0x080040ac                DMA2_Stream1_IRQHandler
+                0x080040ac                FLASH_IRQHandler
+                0x080040ac                DMA2_Stream4_IRQHandler
+                0x080040ac                USART1_IRQHandler
+                0x080040ac                OTG_FS_IRQHandler
+                0x080040ac                SPI3_IRQHandler
+                0x080040ac                DMA1_Stream4_IRQHandler
+                0x080040ac                I2C1_ER_IRQHandler
+                0x080040ac                DMA2_Stream6_IRQHandler
+                0x080040ac                DMA1_Stream3_IRQHandler
+ *fill*         0x080040ae        0x2 
  .text.SystemInit
-                0x08004080       0x24 libSTM32_Drivers.a(system_stm32f4xx.c.obj)
-                0x08004080                SystemInit
+                0x080040b0       0x24 libSTM32_Drivers.a(system_stm32f4xx.c.obj)
+                0x080040b0                SystemInit
  .text.HAL_RCC_OscConfig
-                0x080040a4      0x4f0 libSTM32_Drivers.a(stm32f4xx_hal_rcc.c.obj)
-                0x080040a4                HAL_RCC_OscConfig
+                0x080040d4      0x4f0 libSTM32_Drivers.a(stm32f4xx_hal_rcc.c.obj)
+                0x080040d4                HAL_RCC_OscConfig
  .text.HAL_RCC_ClockConfig
-                0x08004594      0x1cc libSTM32_Drivers.a(stm32f4xx_hal_rcc.c.obj)
-                0x08004594                HAL_RCC_ClockConfig
+                0x080045c4      0x1cc libSTM32_Drivers.a(stm32f4xx_hal_rcc.c.obj)
+                0x080045c4                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetSysClockFreq
-                0x08004760      0x188 libSTM32_Drivers.a(stm32f4xx_hal_rcc.c.obj)
-                0x08004760                HAL_RCC_GetSysClockFreq
+                0x08004790      0x188 libSTM32_Drivers.a(stm32f4xx_hal_rcc.c.obj)
+                0x08004790                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_GetHCLKFreq
-                0x080048e8       0x18 libSTM32_Drivers.a(stm32f4xx_hal_rcc.c.obj)
-                0x080048e8                HAL_RCC_GetHCLKFreq
+                0x08004918       0x18 libSTM32_Drivers.a(stm32f4xx_hal_rcc.c.obj)
+                0x08004918                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_GetPCLK1Freq
-                0x08004900       0x28 libSTM32_Drivers.a(stm32f4xx_hal_rcc.c.obj)
-                0x08004900                HAL_RCC_GetPCLK1Freq
+                0x08004930       0x28 libSTM32_Drivers.a(stm32f4xx_hal_rcc.c.obj)
+                0x08004930                HAL_RCC_GetPCLK1Freq
  .text.HAL_GPIO_Init
-                0x08004928      0x308 libSTM32_Drivers.a(stm32f4xx_hal_gpio.c.obj)
-                0x08004928                HAL_GPIO_Init
+                0x08004958      0x308 libSTM32_Drivers.a(stm32f4xx_hal_gpio.c.obj)
+                0x08004958                HAL_GPIO_Init
  .text.HAL_GPIO_ReadPin
-                0x08004c30       0x30 libSTM32_Drivers.a(stm32f4xx_hal_gpio.c.obj)
-                0x08004c30                HAL_GPIO_ReadPin
+                0x08004c60       0x30 libSTM32_Drivers.a(stm32f4xx_hal_gpio.c.obj)
+                0x08004c60                HAL_GPIO_ReadPin
  .text.HAL_GPIO_WritePin
-                0x08004c60       0x32 libSTM32_Drivers.a(stm32f4xx_hal_gpio.c.obj)
-                0x08004c60                HAL_GPIO_WritePin
+                0x08004c90       0x32 libSTM32_Drivers.a(stm32f4xx_hal_gpio.c.obj)
+                0x08004c90                HAL_GPIO_WritePin
  .text.HAL_GPIO_TogglePin
-                0x08004c92       0x34 libSTM32_Drivers.a(stm32f4xx_hal_gpio.c.obj)
-                0x08004c92                HAL_GPIO_TogglePin
- *fill*         0x08004cc6        0x2 
+                0x08004cc2       0x34 libSTM32_Drivers.a(stm32f4xx_hal_gpio.c.obj)
+                0x08004cc2                HAL_GPIO_TogglePin
+ *fill*         0x08004cf6        0x2 
  .text.HAL_GPIO_EXTI_IRQHandler
-                0x08004cc8       0x30 libSTM32_Drivers.a(stm32f4xx_hal_gpio.c.obj)
-                0x08004cc8                HAL_GPIO_EXTI_IRQHandler
+                0x08004cf8       0x30 libSTM32_Drivers.a(stm32f4xx_hal_gpio.c.obj)
+                0x08004cf8                HAL_GPIO_EXTI_IRQHandler
  .text.HAL_Init
-                0x08004cf8       0x44 libSTM32_Drivers.a(stm32f4xx_hal.c.obj)
-                0x08004cf8                HAL_Init
+                0x08004d28       0x44 libSTM32_Drivers.a(stm32f4xx_hal.c.obj)
+                0x08004d28                HAL_Init
  .text.HAL_InitTick
-                0x08004d3c       0x60 libSTM32_Drivers.a(stm32f4xx_hal.c.obj)
-                0x08004d3c                HAL_InitTick
+                0x08004d6c       0x60 libSTM32_Drivers.a(stm32f4xx_hal.c.obj)
+                0x08004d6c                HAL_InitTick
  .text.HAL_IncTick
-                0x08004d9c       0x28 libSTM32_Drivers.a(stm32f4xx_hal.c.obj)
-                0x08004d9c                HAL_IncTick
+                0x08004dcc       0x28 libSTM32_Drivers.a(stm32f4xx_hal.c.obj)
+                0x08004dcc                HAL_IncTick
  .text.HAL_GetTick
-                0x08004dc4       0x18 libSTM32_Drivers.a(stm32f4xx_hal.c.obj)
-                0x08004dc4                HAL_GetTick
+                0x08004df4       0x18 libSTM32_Drivers.a(stm32f4xx_hal.c.obj)
+                0x08004df4                HAL_GetTick
  .text.HAL_Delay
-                0x08004ddc       0x48 libSTM32_Drivers.a(stm32f4xx_hal.c.obj)
-                0x08004ddc                HAL_Delay
+                0x08004e0c       0x48 libSTM32_Drivers.a(stm32f4xx_hal.c.obj)
+                0x08004e0c                HAL_Delay
  .text.HAL_I2C_Init
-                0x08004e24      0x288 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
-                0x08004e24                HAL_I2C_Init
+                0x08004e54      0x288 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+                0x08004e54                HAL_I2C_Init
  .text.HAL_I2C_Master_Transmit
-                0x080050ac      0x1fc libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
-                0x080050ac                HAL_I2C_Master_Transmit
+                0x080050dc      0x1fc libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+                0x080050dc                HAL_I2C_Master_Transmit
  .text.HAL_I2C_Master_Receive
-                0x080052a8      0x464 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
-                0x080052a8                HAL_I2C_Master_Receive
+                0x080052d8      0x464 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+                0x080052d8                HAL_I2C_Master_Receive
  .text.HAL_I2C_Mem_Write
-                0x0800570c      0x1f4 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
-                0x0800570c                HAL_I2C_Mem_Write
+                0x0800573c      0x1f4 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+                0x0800573c                HAL_I2C_Mem_Write
  .text.HAL_I2C_Mem_Read
-                0x08005900      0x464 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
-                0x08005900                HAL_I2C_Mem_Read
+                0x08005930      0x464 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+                0x08005930                HAL_I2C_Mem_Read
  .text.I2C_MasterRequestWrite
-                0x08005d64      0x104 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+                0x08005d94      0x104 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
  .text.I2C_MasterRequestRead
-                0x08005e68      0x19c libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+                0x08005e98      0x19c libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
  .text.I2C_RequestMemoryWrite
-                0x08006004      0x12c libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+                0x08006034      0x12c libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
  .text.I2C_RequestMemoryRead
-                0x08006130      0x1d0 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+                0x08006160      0x1d0 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
  .text.I2C_WaitOnFlagUntilTimeout
-                0x08006300       0xf4 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+                0x08006330       0xf4 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
  .text.I2C_WaitOnMasterAddressFlagUntilTimeout
-                0x080063f4      0x140 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+                0x08006424      0x140 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
  .text.I2C_WaitOnTXEFlagUntilTimeout
-                0x08006534       0x90 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+                0x08006564       0x90 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
  .text.I2C_WaitOnBTFFlagUntilTimeout
-                0x080065c4       0x90 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+                0x080065f4       0x90 libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
  .text.I2C_WaitOnRXNEFlagUntilTimeout
-                0x08006654       0xba libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+                0x08006684       0xba libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
  .text.I2C_IsAcknowledgeFailed
-                0x0800670e       0x5e libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+                0x0800673e       0x5e libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
  .text.HAL_SPI_Init
-                0x0800676c      0x112 libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
-                0x0800676c                HAL_SPI_Init
+                0x0800679c      0x112 libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
+                0x0800679c                HAL_SPI_Init
  .text.HAL_SPI_Transmit
-                0x0800687e      0x288 libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
-                0x0800687e                HAL_SPI_Transmit
+                0x080068ae      0x288 libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
+                0x080068ae                HAL_SPI_Transmit
  .text.HAL_SPI_Receive
-                0x08006b06      0x232 libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
-                0x08006b06                HAL_SPI_Receive
+                0x08006b36      0x232 libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
+                0x08006b36                HAL_SPI_Receive
  .text.HAL_SPI_TransmitReceive
-                0x08006d38      0x352 libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
-                0x08006d38                HAL_SPI_TransmitReceive
- *fill*         0x0800708a        0x2 
+                0x08006d68      0x352 libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
+                0x08006d68                HAL_SPI_TransmitReceive
+ *fill*         0x080070ba        0x2 
  .text.SPI_WaitFlagStateUntilTimeout
-                0x0800708c      0x110 libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
+                0x080070bc      0x110 libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
  .text.SPI_EndRxTransaction
-                0x0800719c       0xca libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
- *fill*         0x08007266        0x2 
+                0x080071cc       0xca libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
+ *fill*         0x08007296        0x2 
  .text.SPI_EndRxTxTransaction
-                0x08007268       0xa8 libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
+                0x08007298       0xa8 libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
  .text.__NVIC_SetPriorityGrouping
-                0x08007310       0x48 libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
+                0x08007340       0x48 libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
  .text.__NVIC_GetPriorityGrouping
-                0x08007358       0x1c libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
+                0x08007388       0x1c libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
  .text.__NVIC_SetPriority
-                0x08007374       0x54 libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
+                0x080073a4       0x54 libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
  .text.NVIC_EncodePriority
-                0x080073c8       0x66 libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
- *fill*         0x0800742e        0x2 
+                0x080073f8       0x66 libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
+ *fill*         0x0800745e        0x2 
  .text.SysTick_Config
-                0x08007430       0x44 libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
+                0x08007460       0x44 libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
  .text.HAL_NVIC_SetPriorityGrouping
-                0x08007474       0x16 libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
-                0x08007474                HAL_NVIC_SetPriorityGrouping
+                0x080074a4       0x16 libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
+                0x080074a4                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x0800748a       0x38 libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
-                0x0800748a                HAL_NVIC_SetPriority
+                0x080074ba       0x38 libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
+                0x080074ba                HAL_NVIC_SetPriority
  .text.HAL_SYSTICK_Config
-                0x080074c2       0x18 libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
-                0x080074c2                HAL_SYSTICK_Config
- *fill*         0x080074da        0x2 
- .text.powf     0x080074dc       0xbc /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-wf_pow.o)
-                0x080074dc                powf
- .text.finitef  0x08007598       0x14 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_finite.o)
-                0x08007598                finitef
+                0x080074f2       0x18 libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
+                0x080074f2                HAL_SYSTICK_Config
+ *fill*         0x0800750a        0x2 
+ .text.powf     0x0800750c       0xbc /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-wf_pow.o)
+                0x0800750c                powf
+ .text.finitef  0x080075c8       0x14 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_finite.o)
+                0x080075c8                finitef
  .text.__ieee754_powf
-                0x080075ac      0x6b8 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_pow.o)
-                0x080075ac                __ieee754_powf
- .text.fabsf    0x08007c64       0x10 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_fabs.o)
-                0x08007c64                fabsf
- .text.scalbnf  0x08007c74       0xdc /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_scalbn.o)
-                0x08007c74                scalbnf
+                0x080075dc      0x6b8 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_pow.o)
+                0x080075dc                __ieee754_powf
+ .text.fabsf    0x08007c94       0x10 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_fabs.o)
+                0x08007c94                fabsf
+ .text.scalbnf  0x08007ca4       0xdc /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-sf_scalbn.o)
+                0x08007ca4                scalbnf
  .text.with_errnof
-                0x08007d50       0x1c /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-math_errf.o)
- .text.xflowf   0x08007d6c       0x20 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-math_errf.o)
+                0x08007d80       0x1c /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-math_errf.o)
+ .text.xflowf   0x08007d9c       0x20 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-math_errf.o)
  .text.__math_uflowf
-                0x08007d8c        0xc /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-math_errf.o)
-                0x08007d8c                __math_uflowf
+                0x08007dbc        0xc /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-math_errf.o)
+                0x08007dbc                __math_uflowf
  .text.__math_oflowf
-                0x08007d98        0xc /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-math_errf.o)
-                0x08007d98                __math_oflowf
+                0x08007dc8        0xc /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-math_errf.o)
+                0x08007dc8                __math_oflowf
  .text.__ieee754_sqrtf
-                0x08007da4        0x8 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_sqrt.o)
-                0x08007da4                __ieee754_sqrtf
- .text.memset   0x08007dac       0x10 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-memset.o)
-                0x08007dac                memset
- .text.__errno  0x08007dbc        0xc /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
-                0x08007dbc                __errno
+                0x08007dd4        0x8 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-ef_sqrt.o)
+                0x08007dd4                __ieee754_sqrtf
+ .text.memset   0x08007ddc       0x10 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-memset.o)
+                0x08007ddc                memset
+ .text.__errno  0x08007dec        0xc /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
+                0x08007dec                __errno
  .text.__libc_init_array
-                0x08007dc8       0x48 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-init.o)
-                0x08007dc8                __libc_init_array
- .text.memcpy   0x08007e10       0x1c /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
-                0x08007e10                memcpy
+                0x08007df8       0x48 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-init.o)
+                0x08007df8                __libc_init_array
+ .text.memcpy   0x08007e40       0x1c /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
+                0x08007e40                memcpy
  *(.glue_7)
- .glue_7        0x08007e2c        0x0 linker stubs
+ .glue_7        0x08007e5c        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08007e2c        0x0 linker stubs
+ .glue_7t       0x08007e5c        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08007e2c        0x0 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x08007e5c        0x0 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08007e2c        0x4 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08007e2c                _init
- .init          0x08007e30        0x8 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08007e5c        0x4 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08007e5c                _init
+ .init          0x08007e60        0x8 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08007e38        0x4 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08007e38                _fini
- .fini          0x08007e3c        0x8 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08007e44                        . = ALIGN (0x4)
-                0x08007e44                        _etext = .
+ .fini          0x08007e68        0x4 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08007e68                _fini
+ .fini          0x08007e6c        0x8 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08007e74                        . = ALIGN (0x4)
+                0x08007e74                        _etext = .
 
-.vfp11_veneer   0x08007e44        0x0
- .vfp11_veneer  0x08007e44        0x0 linker stubs
+.vfp11_veneer   0x08007e74        0x0
+ .vfp11_veneer  0x08007e74        0x0 linker stubs
 
-.v4_bx          0x08007e44        0x0
- .v4_bx         0x08007e44        0x0 linker stubs
+.v4_bx          0x08007e74        0x0
+ .v4_bx         0x08007e74        0x0 linker stubs
 
-.iplt           0x08007e44        0x0
- .iplt          0x08007e44        0x0 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08007e74        0x0
+ .iplt          0x08007e74        0x0 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08007e44       0x88
-                0x08007e44                        . = ALIGN (0x4)
+.rodata         0x08007e74       0x88
+                0x08007e74                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.sh2ReportLens
-                0x08007e44       0x60 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x08007e74       0x60 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
  .rodata.setSensorConfigOp
-                0x08007ea4       0x10 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
-                0x08007ea4                setSensorConfigOp
+                0x08007ed4       0x10 CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+                0x08007ed4                setSensorConfigOp
  .rodata.AHBPrescTable
-                0x08007eb4       0x10 libSTM32_Drivers.a(system_stm32f4xx.c.obj)
-                0x08007eb4                AHBPrescTable
+                0x08007ee4       0x10 libSTM32_Drivers.a(system_stm32f4xx.c.obj)
+                0x08007ee4                AHBPrescTable
  .rodata.APBPrescTable
-                0x08007ec4        0x8 libSTM32_Drivers.a(system_stm32f4xx.c.obj)
-                0x08007ec4                APBPrescTable
-                0x08007ecc                        . = ALIGN (0x4)
+                0x08007ef4        0x8 libSTM32_Drivers.a(system_stm32f4xx.c.obj)
+                0x08007ef4                APBPrescTable
+                0x08007efc                        . = ALIGN (0x4)
 
-.ARM.extab      0x08007ecc        0x0
-                0x08007ecc                        . = ALIGN (0x4)
+.ARM.extab      0x08007efc        0x0
+                0x08007efc                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08007ecc                        . = ALIGN (0x4)
+                0x08007efc                        . = ALIGN (0x4)
 
-.ARM            0x08007ecc        0x8
-                0x08007ecc                        . = ALIGN (0x4)
-                0x08007ecc                        __exidx_start = .
+.ARM            0x08007efc        0x8
+                0x08007efc                        . = ALIGN (0x4)
+                0x08007efc                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08007ecc        0x8 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
-                0x08007ed4                        __exidx_end = .
-                0x08007ed4                        . = ALIGN (0x4)
+ .ARM.exidx     0x08007efc        0x8 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+                0x08007f04                        __exidx_end = .
+                0x08007f04                        . = ALIGN (0x4)
 
-.preinit_array  0x08007ed4        0x0
-                0x08007ed4                        . = ALIGN (0x4)
-                0x08007ed4                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08007f04        0x0
+                0x08007f04                        . = ALIGN (0x4)
+                0x08007f04                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08007ed4                        PROVIDE (__preinit_array_end = .)
-                0x08007ed4                        . = ALIGN (0x4)
+                0x08007f04                        PROVIDE (__preinit_array_end = .)
+                0x08007f04                        . = ALIGN (0x4)
 
-.init_array     0x08007ed4        0x4
-                0x08007ed4                        . = ALIGN (0x4)
-                0x08007ed4                        PROVIDE (__init_array_start = .)
+.init_array     0x08007f04        0x4
+                0x08007f04                        . = ALIGN (0x4)
+                0x08007f04                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08007ed4        0x4 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08007ed8                        PROVIDE (__init_array_end = .)
-                0x08007ed8                        . = ALIGN (0x4)
+ .init_array    0x08007f04        0x4 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08007f08                        PROVIDE (__init_array_end = .)
+                0x08007f08                        . = ALIGN (0x4)
 
-.fini_array     0x08007ed8        0x4
-                0x08007ed8                        . = ALIGN (0x4)
+.fini_array     0x08007f08        0x4
+                0x08007f08                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08007ed8        0x4 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x08007f08        0x4 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x08007edc                        . = ALIGN (0x4)
-                0x08007edc                        _sidata = LOADADDR (.data)
+                0x08007f0c                        . = ALIGN (0x4)
+                0x08007f0c                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x08007edc        0x0
- .rel.iplt      0x08007edc        0x0 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x08007f0c        0x0
+ .rel.iplt      0x08007f0c        0x0 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.data           0x20000000       0x74 load address 0x08007edc
+.data           0x20000000       0x74 load address 0x08007f0c
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -4320,10 +4320,10 @@ LOAD /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1
  *(.RamFunc*)
                 0x20000074                        . = ALIGN (0x4)
 
-.igot.plt       0x20000074        0x0 load address 0x08007f50
+.igot.plt       0x20000074        0x0 load address 0x08007f80
  .igot.plt      0x20000074        0x0 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.tdata          0x20000074        0x0 load address 0x08007f50
+.tdata          0x20000074        0x0 load address 0x08007f80
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x20000074                        . = ALIGN (0x4)
                 0x20000074                        _edata = .
@@ -4340,7 +4340,7 @@ LOAD /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1
                 [!provide]                        PROVIDE (__data_source_end = __tdata_source_end)
                 [!provide]                        PROVIDE (__data_source_size = (__data_source_end - __data_source))
 
-.tbss           0x20000074        0x0 load address 0x08007f50
+.tbss           0x20000074        0x0 load address 0x08007f80
                 0x20000074                        _sbss = .
                 0x20000074                        __bss_start__ = _sbss
  *(.tbss .tbss.*)
@@ -4357,7 +4357,7 @@ LOAD /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1
                 [!provide]                        PROVIDE (__arm32_tls_tcb_offset = MAX (0x8, __tls_align))
                 [!provide]                        PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
 
-.bss            0x20000074      0xd30 load address 0x08007f50
+.bss            0x20000074      0xd30 load address 0x08007f80
  *(.bss)
  .bss           0x20000074       0x1c /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.bss*)
@@ -4457,7 +4457,7 @@ LOAD /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1
                 [!provide]                        PROVIDE (__bss_size = (__bss_end - __bss_start))
 
 ._user_heap_stack
-                0x20000da4      0x604 load address 0x08007f50
+                0x20000da4      0x604 load address 0x08007f80
                 0x20000da8                        . = ALIGN (0x8)
  *fill*         0x20000da4        0x4 
                 [!provide]                        PROVIDE (end = .)
@@ -4843,33 +4843,33 @@ LOAD linker stubs
  .debug_macro   0x00017223      0x1f6 libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
  .debug_macro   0x00017419      0x1e7 libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
 
-.debug_line     0x00000000    0x12a94
- .debug_line    0x00000000      0xfa5 CMakeFiles/CanSat_Final.dir/Core/Src/main.c.obj
- .debug_line    0x00000fa5      0x87e CMakeFiles/CanSat_Final.dir/Core/Src/gpio.c.obj
- .debug_line    0x00001823      0x8b9 CMakeFiles/CanSat_Final.dir/Core/Src/i2c.c.obj
- .debug_line    0x000020dc      0x8c1 CMakeFiles/CanSat_Final.dir/Core/Src/spi.c.obj
- .debug_line    0x0000299d      0x92a CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_line    0x000032c7      0x84b CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_line    0x00003b12     0x10b0 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
- .debug_line    0x00004bc2      0x52a CMakeFiles/CanSat_Final.dir/Core/Src/sh2_util.c.obj
- .debug_line    0x000050ec     0x1aad CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
- .debug_line    0x00006b99      0x794 CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
- .debug_line    0x0000732d      0x954 CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
- .debug_line    0x00007c81      0x888 CMakeFiles/CanSat_Final.dir/Core/Src/telemetry.c.obj
- .debug_line    0x00008509       0x7a CMakeFiles/CanSat_Final.dir/startup_stm32f411xe.s.obj
- .debug_line    0x00008583      0x8c1 libSTM32_Drivers.a(system_stm32f4xx.c.obj)
- .debug_line    0x00008e44      0xf4a libSTM32_Drivers.a(stm32f4xx_hal_rcc.c.obj)
- .debug_line    0x00009d8e      0xc56 libSTM32_Drivers.a(stm32f4xx_hal_gpio.c.obj)
- .debug_line    0x0000a9e4      0xb40 libSTM32_Drivers.a(stm32f4xx_hal.c.obj)
- .debug_line    0x0000b524     0x3bea libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
- .debug_line    0x0000f10e     0x1dd8 libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
- .debug_line    0x00010ee6      0xe0d libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
- .debug_line    0x00011cf3      0x5d1 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-findfp.o)
- .debug_line    0x000122c4      0x17e /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-memset.o)
- .debug_line    0x00012442      0x163 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-impure.o)
- .debug_line    0x000125a5      0x185 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
- .debug_line    0x0001272a      0x168 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-init.o)
- .debug_line    0x00012892      0x202 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
+.debug_line     0x00000000    0x12a97
+ .debug_line    0x00000000      0xfa8 CMakeFiles/CanSat_Final.dir/Core/Src/main.c.obj
+ .debug_line    0x00000fa8      0x87e CMakeFiles/CanSat_Final.dir/Core/Src/gpio.c.obj
+ .debug_line    0x00001826      0x8b9 CMakeFiles/CanSat_Final.dir/Core/Src/i2c.c.obj
+ .debug_line    0x000020df      0x8c1 CMakeFiles/CanSat_Final.dir/Core/Src/spi.c.obj
+ .debug_line    0x000029a0      0x92a CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_line    0x000032ca      0x84b CMakeFiles/CanSat_Final.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_line    0x00003b15     0x10b0 CMakeFiles/CanSat_Final.dir/Core/Src/sh2_SensorValue.c.obj
+ .debug_line    0x00004bc5      0x52a CMakeFiles/CanSat_Final.dir/Core/Src/sh2_util.c.obj
+ .debug_line    0x000050ef     0x1aad CMakeFiles/CanSat_Final.dir/Core/Src/sh2.c.obj
+ .debug_line    0x00006b9c      0x794 CMakeFiles/CanSat_Final.dir/Core/Src/shtp.c.obj
+ .debug_line    0x00007330      0x954 CMakeFiles/CanSat_Final.dir/Core/Src/sx1278.c.obj
+ .debug_line    0x00007c84      0x888 CMakeFiles/CanSat_Final.dir/Core/Src/telemetry.c.obj
+ .debug_line    0x0000850c       0x7a CMakeFiles/CanSat_Final.dir/startup_stm32f411xe.s.obj
+ .debug_line    0x00008586      0x8c1 libSTM32_Drivers.a(system_stm32f4xx.c.obj)
+ .debug_line    0x00008e47      0xf4a libSTM32_Drivers.a(stm32f4xx_hal_rcc.c.obj)
+ .debug_line    0x00009d91      0xc56 libSTM32_Drivers.a(stm32f4xx_hal_gpio.c.obj)
+ .debug_line    0x0000a9e7      0xb40 libSTM32_Drivers.a(stm32f4xx_hal.c.obj)
+ .debug_line    0x0000b527     0x3bea libSTM32_Drivers.a(stm32f4xx_hal_i2c.c.obj)
+ .debug_line    0x0000f111     0x1dd8 libSTM32_Drivers.a(stm32f4xx_hal_spi.c.obj)
+ .debug_line    0x00010ee9      0xe0d libSTM32_Drivers.a(stm32f4xx_hal_cortex.c.obj)
+ .debug_line    0x00011cf6      0x5d1 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-findfp.o)
+ .debug_line    0x000122c7      0x17e /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-memset.o)
+ .debug_line    0x00012445      0x163 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-impure.o)
+ .debug_line    0x000125a8      0x185 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-errno.o)
+ .debug_line    0x0001272d      0x168 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-init.o)
+ .debug_line    0x00012895      0x202 /home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
 
 .debug_str      0x00000000    0x8f14e
  .debug_str     0x00000000    0x8f14e CMakeFiles/CanSat_Final.dir/Core/Src/main.c.obj

@@ -83,11 +83,10 @@ uint8_t calculateCRC8(const uint8_t *data, size_t len) {
 
 /**
 * Empaqueta y envía datos por Serial.
-* Estructura: [SYNC_BYTE][HEADER][LENGTH][BUFFER][CRC8]
+* Estructura: [HEADER][LENGTH][BUFFER][CRC8]
 */
 void forwardToSerial(uint8_t header, uint8_t* buffer, size_t len) {
   uint8_t crc = calculateCRC8(buffer, len);
-  Serial.write(SYNC_BYTE);
   Serial.write(header);
   Serial.write((uint8_t)len);
   Serial.write(buffer, len);
@@ -137,16 +136,17 @@ void recibe() {
       
       if (len == sizeof(FullTelemetryPacket)) 
       {
-        // Wizard time
         FullTelemetryPacket* pkg = (FullTelemetryPacket*)buffer;
 
-        if (pkg->base.verificacion == 1)
+        if (pkg->base.trigger == 1)
         {
           digitalWrite(LED_AZUL, HIGH);
           t_azul = millis(); 
         }
-        
-        forwardToSerial(HEADER_TELEMETRY, buffer, len);
+        else if (pkg->base.trigger == 2)
+        {
+          digitalWrite(LED_ROJO, HIGH);
+        }
       } 
       else if (len <= 4) 
       {

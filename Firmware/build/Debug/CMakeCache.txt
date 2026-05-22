@@ -59,7 +59,7 @@ CMAKE_C_COMPILER_AR:FILEPATH=/home/gashadokuro/.local/share/stm32cube/bundles/gn
 CMAKE_C_COMPILER_RANLIB:FILEPATH=/home/gashadokuro/.local/share/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc-ranlib
 
 //Flags used by the C compiler during all build types.
-CMAKE_C_FLAGS:STRING=
+CMAKE_C_FLAGS:STRING=-Wall -Wextra
 
 //Flags used by the C compiler during DEBUG builds.
 CMAKE_C_FLAGS_DEBUG:STRING=-g
