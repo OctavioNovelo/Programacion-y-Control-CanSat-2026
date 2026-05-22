@@ -6,12 +6,14 @@
   ******************************************************************************
   */
 /* USER CODE END Header */
-
+/* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "crc.h"
 #include "i2c.h"
 #include "spi.h"
+#include "stm32f411xe.h"
 #include "stm32f4xx_hal.h"
+#include "stm32f4xx_hal_gpio.h"
 #include "usart.h"
 #include "gpio.h"
 #include <stdio.h>
@@ -23,22 +25,37 @@
 #include "telemetry.h"
 #include "sx1278.h"
 
-// Cosas por agregar. 
-// Hay que cambiar el protocolo para enviar un byte de trigger, ajustar el MAGIC, eliminar pkt y agregar humedad, eliminamos checksum tambien.
-// Revisar el blink
-
 /* ---- Configuración de Rendimiento ---- */
 #define LORA_POWER_LEVEL    0x82            /* Potencia baja-media */
 #define LORA_INTERVAL_MS    1000            /* 1 Hz para estabilidad y debug, yo creo que es momento de cambiarlo */ 
-#define ALTITUD_DESPLIEGUE  300
+#define ALTITUD_DESPLIEGUE  3
+#define ALTITUD_CAMARA      3
+#define HEADER_TELEMETRY    0x10
 
+/* Private typedef -----------------------------------------------------------*/
+/* USER CODE BEGIN PTD */
+
+/* USER CODE END PTD */
+
+/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN PD */
+
+/* USER CODE END PD */
+
+/* Private macro -------------------------------------------------------------*/
+/* USER CODE BEGIN PM */
+
+/* USER CODE END PM */
+
+/* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
 extern volatile uint8_t sx1278_tx_done;
 
-volatile int32_t  temperature = 0;
-volatile uint32_t pressure = 0, altitude = 0, tx_count = 0;
-volatile float    accel_x=0, accel_y=0, accel_z=0, gyro_x=0, gyro_y=0, gyro_z=0;
+volatile uint16_t  trigger = 0;
+volatile uint32_t  temperature = 0;
+volatile uint32_t pressure=0, altitude = 0, tx_count = 0, humedad = 0;
+volatile uint16_t    accel_x=0, accel_y=0, accel_z=0, gyro_x=0, gyro_y=0, gyro_z=0;
 volatile float    pressure_init = 0.0f;
 volatile uint8_t  is_calibrated = 0, trigger_activado = 0;
 volatile uint8_t  confirmaciones_altitud = 0; 
@@ -47,7 +64,6 @@ volatile uint32_t t_inicio_liberacion = 0;    /* Para el temporizador de apagado
 volatile uint8_t  liberacion_en_progreso = 0; /* Para saber si el pin está encendido */
 
 volatile TelemetryPacketLoRa g_last_lora_packet;
-volatile PacketLoRaBNO       g_last_bno_packet;
 volatile uint8_t             g_lora_ready = 1;
 
 static volatile uint8_t  bno_int_flag = 0;
@@ -103,8 +119,7 @@ uint32_t BME280_compensate_P_int64(int32_t adc_P) {
 //=============================================================================================================================
 /* USER CODE END PV */
 
-//=============================================================================================================================
-/* Prototypes */
+/* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void lora_fast_init(void);
 static void lora_send_async(void);
@@ -199,7 +214,6 @@ static void lora_fast_init(void) {
     sx1278_write(0x09, LORA_POWER_LEVEL); 
 }
 //=============================================================================================================================
-
 //=============================================================================================================================
 /* MAIN */
 int main(void)
@@ -214,7 +228,8 @@ int main(void)
     /* Blink rápido de vida */
     for(int i = 0; i < 6; i++) 
     { 
-        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_4); HAL_Delay(30); 
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_4);
+        HAL_Delay(30); 
     }
     
     // Inicializamos sx1278
@@ -259,7 +274,7 @@ int main(void)
     uint32_t t_lora = HAL_GetTick();
     uint32_t t_bme = HAL_GetTick();
 
-    // Loop =======================================================================================================================
+   // Loop =======================================================================================================================
     while (1)
     {
         sh2_service(); 
@@ -279,22 +294,30 @@ int main(void)
                 uint32_t p_final = BME280_compensate_P_int64(p_raw);
 
                 temperature = t_final;    /* En 0.01 degC */
-                pressure = p_final / 100; /* En hPa */
+                pressure = p_final * 100; /* En KPa */
 
                 if (!is_calibrated && p_final > 0) 
                 { 
-                    pressure_init = (float)p_final; is_calibrated = 1; 
+                    pressure_init = (float)p_final; 
+                    is_calibrated = 1; 
                 }
                 if (is_calibrated) 
                 {
                     float al = 44330.0f * (1.0f - powf((float)p_final/pressure_init, 0.1903f));
                     altitude = (uint32_t)al;
 
-                    /* --- SISTEMA DE DESPLIEGUE --- */
+                    /* --- SISTEMA DE DESPLIEGUE Y CAMRAS --- */
                     // 1. Armar Trigger
                     if (!subida_completada && altitude > (ALTITUD_DESPLIEGUE + 30)) 
                     {
                         subida_completada = 1; // Ya estamos arriba, ahora esperamos la bajada
+                        if (altitude >= ALTITUD_CAMARA) 
+                        {
+                            HAL_GPIO_WritePin(GPIOA, PIN_CAMARAS_Pin, GPIO_PIN_SET); // Enciende pin de cámara
+                            HAL_GPIO_WritePin(GPIOA, LED_VERDE_Pin, GPIO_PIN_SET); // Enciende LED rojo para indicar que se alcanzó altitud de cámara
+                        }
+                        subida_completada = 1;
+                        trigger = 1;
                     }
 
                     // 2. Disparar Trigger
@@ -306,9 +329,11 @@ int main(void)
                             if (confirmaciones_altitud >= 5) // ~500ms de confirmación estable
                             { 
                                 HAL_GPIO_WritePin(GPIOB, PIN_LIBERACION_Pin, GPIO_PIN_SET);
+                                HAL_GPIO_WritePin(GPIOB, LED_ROJO_Pin, GPIO_PIN_SET);
                                 trigger_activado = 1;
                                 liberacion_en_progreso = 1;
                                 t_inicio_liberacion = HAL_GetTick();
+                                trigger = 2; 
                             }
                         } 
                         else 
@@ -351,22 +376,21 @@ int main(void)
 
 static void lora_send_async(void) 
 {
-    static uint8_t buf[sizeof(TelemetryPacketLoRa) + sizeof(PacketLoRaBNO)];
+    static uint8_t buf[sizeof(TelemetryPacketLoRa)];
     TelemetryPacketLoRa pL;
-    telemetry_build_LoRa(&pL, (int16_t)temperature, (uint16_t)altitude, (uint16_t)pressure, 1);
-    PacketLoRaBNO pB;
-    telemetry_LoRa_BNO(&pB, accel_x, accel_y, accel_z, gyro_x, gyro_y, gyro_z);
+    // Fix: Pass all 6 arguments in correct order: temperature, pressure, humidity, altitude, trigger
+    telemetry_build_LoRa(&pL, HEADER_TELEMETRY, (uint16_t)temperature, (uint16_t)pressure, (uint16_t)humedad, (uint16_t)altitude, (uint16_t)accel_y, (uint16_t)trigger);
     
     /* Guardamos para debug local */
     g_last_lora_packet = pL;
-    g_last_bno_packet = pB;
 
     memcpy(buf, &pL, sizeof(pL)); 
-    memcpy(buf+sizeof(pL), &pB, sizeof(pB));
     
-    HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_4);
+    HAL_GPIO_WritePin(GPIOB, LED_AZUL_Pin, GPIO_PIN_SET); // Prender LED al enviar
     g_lora_ready = 0;
     sx1278_send(buf, sizeof(buf));
+    HAL_GPIO_WritePin(GPIOB, LED_AZUL_Pin, GPIO_PIN_RESET); // Apagar LED al terminar
+
     tx_count++;
 }
 

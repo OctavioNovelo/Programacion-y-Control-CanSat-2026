@@ -1,4 +1,4 @@
-# Install script for directory: /home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final
+# Install script for directory: /home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,7 +40,7 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/build/Debug/install_local_manifest.txt"
+  file(WRITE "/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/build/Debug/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -56,6 +56,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/build/Debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/build/Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

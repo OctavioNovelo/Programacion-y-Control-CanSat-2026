@@ -1,4 +1,4 @@
-/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/build/Debug/CMakeFiles/CanSat_Final.dir
-/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/build/Debug/CMakeFiles/STM32_Drivers.dir
-/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/build/Debug/CMakeFiles/edit_cache.dir
-/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/build/Debug/CMakeFiles/rebuild_cache.dir
+/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/build/Debug/CMakeFiles/CanSat_Final.dir
+/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/build/Debug/CMakeFiles/STM32_Drivers.dir
+/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/build/Debug/CMakeFiles/edit_cache.dir
+/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/build/Debug/CMakeFiles/rebuild_cache.dir

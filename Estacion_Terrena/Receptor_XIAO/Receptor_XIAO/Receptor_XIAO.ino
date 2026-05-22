@@ -6,7 +6,6 @@ SX1278 radio = new Module(5, 2, 14, 27);
 // ================== HEADERS Y PROTOCOLO ==================
 #define HEADER_TELEMETRY      0x10  // Telemetría general (BME280 + BNO085)
 #define HEADER_DESCENT_STATUS 0x20  // Señal de estado de descenso
-#define SYNC_BYTE             0x5A  // Byte de sincronización 'Z'
 
 #define LED_AZUL D1
 #define LED_VERDE D2
@@ -21,17 +20,17 @@ const int LED_OFF_MS = 500;
 // ====================================
 
 // #pragma es para quitar los paddings
-#pragma pack(push, 1)
-typedef struct 
+#pragma pack(push,1)
+typedef struct
 {
-  uint8_t magic;
-  uint8_t pkt;
-  int16_t temperatura;
-  int16_t altitud;
-  uint16_t presion;
-  uint8_t verificacion;
-  uint8_t checksum;
+    uint8_t pkt;
+    int16_t temperatura;
+    uint16_t presion;
+    uint16_t humidity;
+    int16_t altitud;
+    uint8_t trigger;
 } TelemetryPacketLoRa;
+
 
 typedef struct 
 {

@@ -50,16 +50,19 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, PIN_CAMARAS_Pin|LED_ROJO_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, LORA_RST_Pin|LORA_NSS_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LED_AZUL_Pin|PIN_LIBERACION_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, LED_VERDE_Pin|LED_AZUL_Pin|PIN_LIBERACION_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(BNO_RST_GPIO_Port, BNO_RST_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pins : LORA_RST_Pin LORA_NSS_Pin */
-  GPIO_InitStruct.Pin = LORA_RST_Pin|LORA_NSS_Pin;
+  /*Configure GPIO pins : PIN_CAMARAS_Pin LORA_RST_Pin LORA_NSS_Pin LED_ROJO_Pin */
+  GPIO_InitStruct.Pin = PIN_CAMARAS_Pin|LORA_RST_Pin|LORA_NSS_Pin|LED_ROJO_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -71,8 +74,8 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(LORA_DIO0_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LED_AZUL_Pin PIN_LIBERACION_Pin BNO_RST_Pin */
-  GPIO_InitStruct.Pin = LED_AZUL_Pin|PIN_LIBERACION_Pin|BNO_RST_Pin;
+  /*Configure GPIO pins : LED_VERDE_Pin LED_AZUL_Pin PIN_LIBERACION_Pin BNO_RST_Pin */
+  GPIO_InitStruct.Pin = LED_VERDE_Pin|LED_AZUL_Pin|PIN_LIBERACION_Pin|BNO_RST_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

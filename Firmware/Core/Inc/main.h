@@ -57,12 +57,18 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define PIN_CAMARAS_Pin GPIO_PIN_1
+#define PIN_CAMARAS_GPIO_Port GPIOA
 #define LORA_RST_Pin GPIO_PIN_3
 #define LORA_RST_GPIO_Port GPIOA
 #define LORA_NSS_Pin GPIO_PIN_4
 #define LORA_NSS_GPIO_Port GPIOA
 #define LORA_DIO0_Pin GPIO_PIN_1
 #define LORA_DIO0_GPIO_Port GPIOB
+#define LED_ROJO_Pin GPIO_PIN_15
+#define LED_ROJO_GPIO_Port GPIOA
+#define LED_VERDE_Pin GPIO_PIN_3
+#define LED_VERDE_GPIO_Port GPIOB
 #define LED_AZUL_Pin GPIO_PIN_4
 #define LED_AZUL_GPIO_Port GPIOB
 #define PIN_LIBERACION_Pin GPIO_PIN_5

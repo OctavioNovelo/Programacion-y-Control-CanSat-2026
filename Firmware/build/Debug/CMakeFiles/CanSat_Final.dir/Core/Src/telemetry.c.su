@@ -1,3 +1,1 @@
-/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/Core/Src/telemetry.c:12:16:telemetry_checksum	24	static
-/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/Core/Src/telemetry.c:23:6:telemetry_build_LoRa	24	static
-/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/Core/Src/telemetry.c:35:6:telemetry_LoRa_BNO	40	static
+/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Src/telemetry.c:16:6:telemetry_build_LoRa	24	static

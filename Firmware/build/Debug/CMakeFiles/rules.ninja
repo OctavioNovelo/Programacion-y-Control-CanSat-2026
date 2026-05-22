@@ -71,7 +71,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/bin/cmake --regenerate-during-build -S/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final -B/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/build/Debug
+  command = /home/gashadokuro/.local/share/stm32cube/bundles/cmake/4.2.3+st.1/bin/cmake --regenerate-during-build -S/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware -B/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/build/Debug
   description = Re-running CMake...
   generator = 1
 

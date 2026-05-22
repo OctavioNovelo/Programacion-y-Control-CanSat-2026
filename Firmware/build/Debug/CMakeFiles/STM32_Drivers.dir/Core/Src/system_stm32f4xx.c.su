@@ -1,2 +1,2 @@
-/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/Core/Src/system_stm32f4xx.c:167:6:SystemInit	4	static
-/home/gashadokuro/Documents/Progrmacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/CanSat_Final/Core/Src/system_stm32f4xx.c:220:6:SystemCoreClockUpdate	32	static
+/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Src/system_stm32f4xx.c:167:6:SystemInit	4	static
+/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Src/system_stm32f4xx.c:220:6:SystemCoreClockUpdate	32	static
