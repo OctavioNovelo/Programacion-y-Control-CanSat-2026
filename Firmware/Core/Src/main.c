@@ -16,6 +16,7 @@
 #include "stm32f4xx_hal_gpio.h"
 #include "usart.h"
 #include "gpio.h"
+#include <stdint.h>
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -27,9 +28,9 @@
 
 /* ---- Configuración de Rendimiento ---- */
 #define LORA_POWER_LEVEL    0x82            /* Potencia baja-media */
-#define LORA_INTERVAL_MS    1000            /* 1 Hz para estabilidad y debug, yo creo que es momento de cambiarlo */ 
-#define ALTITUD_DESPLIEGUE  3
-#define ALTITUD_CAMARA      3
+#define LORA_INTERVAL_MS    100            /* 1 Hz para estabilidad y debug, yo creo que es momento de cambiarlo */ 
+#define ALTITUD_DESPLIEGUE  300
+#define ALTITUD_CAMARA      250
 #define HEADER_TELEMETRY    0x10
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,9 +54,9 @@
 extern volatile uint8_t sx1278_tx_done;
 
 volatile uint16_t  trigger = 0;
-volatile uint32_t  temperature = 0;
-volatile uint32_t pressure=0, altitude = 0, tx_count = 0, humedad = 0;
-volatile uint16_t    accel_x=0, accel_y=0, accel_z=0, gyro_x=0, gyro_y=0, gyro_z=0;
+volatile uint16_t  temperature = 0;
+volatile uint16_t  pressure=0, altitude = 0, tx_count = 0, humedad = 0;
+volatile uint16_t  accel_x=0, accel_y=0, accel_z=0, gyro_x=0, gyro_y=0, gyro_z=0, aceleracion = 0;
 volatile float    pressure_init = 0.0f;
 volatile uint8_t  is_calibrated = 0, trigger_activado = 0;
 volatile uint8_t  confirmaciones_altitud = 0; 
@@ -70,11 +71,28 @@ static volatile uint8_t  bno_int_flag = 0;
 static volatile uint32_t bno_int_time_us = 0;
 
 //=============================================================================================================================
+/* BNO */
+uint16_t getVerticalAcceleration(
+    uint16_t accel_x,
+    uint16_t accel_y,
+    uint16_t accel_z,
+    uint16_t roll,
+    uint16_t pitch
+) {
+    uint16_t verticalAccel =
+        accel_x * sin(pitch) +
+        accel_y * sin(roll) +
+        accel_z * cos(roll) * cos(pitch);
+
+    return verticalAccel;
+}
+//=============================================================================================================================
 /* BME280 Calibration Data */
 typedef struct {
     uint16_t dig_T1;
     int16_t  dig_T2;
     int16_t  dig_T3;
+
     uint16_t dig_P1;
     int16_t  dig_P2;
     int16_t  dig_P3;
@@ -84,6 +102,14 @@ typedef struct {
     int16_t  dig_P7;
     int16_t  dig_P8;
     int16_t  dig_P9;
+
+    uint8_t  dig_H1;
+    int16_t  dig_H2;
+    uint8_t  dig_H3;
+    int16_t  dig_H4;
+    int16_t  dig_H5;
+    int8_t   dig_H6;
+
 } BME280_CalibData;
 
 BME280_CalibData bme_calib;
@@ -115,6 +141,24 @@ uint32_t BME280_compensate_P_int64(int32_t adc_P) {
     var2 = (((int64_t)bme_calib.dig_P8) * p) >> 19;
     p = ((p + var1 + var2) >> 8) + (((int64_t)bme_calib.dig_P7) << 4);
     return (uint32_t)(p >> 8); // Pressure in Pa
+}
+
+uint32_t BME280_compensate_H_int32(int32_t adc_H) {
+    int32_t v_x1_u32r;
+
+    v_x1_u32r = t_fine - ((int32_t)76800);
+
+    v_x1_u32r = (((((adc_H << 14) - (((int32_t)bme_calib.dig_H4) << 20) - (((int32_t)bme_calib.dig_H5) * v_x1_u32r)) + ((int32_t)16384)) >> 15) * (((((((v_x1_u32r * ((int32_t)bme_calib.dig_H6)) >> 10) * (((v_x1_u32r * ((int32_t)bme_calib.dig_H3)) >> 11) + ((int32_t)32768))) >> 10) + ((int32_t)2097152)) * ((int32_t)bme_calib.dig_H2) + 8192) >> 14));
+
+    v_x1_u32r = (v_x1_u32r - (((((v_x1_u32r >> 15) * (v_x1_u32r >> 15)) >> 7) * ((int32_t)bme_calib.dig_H1)) >> 4));
+ 
+    if (v_x1_u32r < 0)
+        v_x1_u32r = 0;
+
+    if (v_x1_u32r > 419430400)
+        v_x1_u32r = 419430400;
+
+    return (uint32_t)(v_x1_u32r >> 12);
 }
 //=============================================================================================================================
 /* USER CODE END PV */
@@ -260,9 +304,29 @@ int main(void)
         bme_calib.dig_P9 = (int16_t)((calib[23] << 8) | calib[22]);
     }
 
+    /* NUEVO: Leer calibración de humedad */
+    uint8_t calib_h1;
+    if (HAL_I2C_Mem_Read(&hi2c1, (0x76 << 1), 0xA1, 1, &calib_h1, 1, 10) == HAL_OK) {
+        bme_calib.dig_H1 = calib_h1;
+    }
+
+    uint8_t calib_h[7];
+    if (HAL_I2C_Mem_Read(&hi2c1, (0x76 << 1), 0xE1, 1, calib_h, 7, 10) == HAL_OK) {
+        bme_calib.dig_H2 = (int16_t)((calib_h[1] << 8) | calib_h[0]);
+        bme_calib.dig_H3 = calib_h[2];
+        /* Los registros H4 y H5 comparten un byte a nivel de bits (0xE5) */
+        bme_calib.dig_H4 = (int16_t)((((int16_t)calib_h[3]) << 4) | (calib_h[4] & 0x0F));
+
+        bme_calib.dig_H5 = (int16_t)((((int16_t)calib_h[5]) << 4) | (calib_h[4] >> 4));
+        bme_calib.dig_H6 = (int8_t)calib_h[6];
+    }
+
     /* 0xF5 config: standby 0.5ms, filter off */
     uint8_t f5 = 0x00;
     HAL_I2C_Mem_Write(&hi2c1, (0x76<<1), 0xF5, 1, &f5, 1, 10);
+    /* NUEVO: 0xF2 ctrl_hum: oversampling de humedad x1 */
+    uint8_t f2 = 0x01; 
+    HAL_I2C_Mem_Write(&hi2c1, (0x76<<1), 0xF2, 1, &f2, 1, 10);
     /* 0xF4 ctrl_meas: osrs_t x1, osrs_p x1, normal mode */
     uint8_t f4 = 0x27;
     HAL_I2C_Mem_Write(&hi2c1, (0x76<<1), 0xF4, 1, &f4, 1, 10);
@@ -288,17 +352,21 @@ int main(void)
         /* Lectura BME280 cada 100ms */
         if (t_now - t_bme >= 100) {
             t_bme = t_now;
-            uint8_t d[6];
-            if (HAL_I2C_Mem_Read(&hi2c1, (0x76 << 1), 0xF7, 1, d, 6, 10) == HAL_OK) {
+            uint8_t d[8];
+            if (HAL_I2C_Mem_Read(&hi2c1, (0x76 << 1), 0xF7, 1, d, 8, 10) == HAL_OK) {
                 uint32_t p_raw = (uint32_t)((d[0] << 12) | (d[1] << 4) | (d[2] >> 4));
                 uint32_t t_raw = (uint32_t)((d[3] << 12) | (d[4] << 4) | (d[5] >> 4));
-                
+                uint32_t h_raw = (uint16_t)((d[6] << 8) | d[7]);
                 /* Proper Bosch Compensation */
                 int32_t t_final = BME280_compensate_T_int32(t_raw);
                 uint32_t p_final = BME280_compensate_P_int64(p_raw);
-
+                uint32_t h_final = BME280_compensate_H_int32(h_raw); // No usamos humedad por ahora, pero si la queremos agregar después, esta es la función que hay que usar.
+                
+                
                 temperature = t_final;    /* En 0.01 degC */
                 pressure = p_final / 1000; /* En KPa */
+                humedad = h_final / 1024.0f; /* En %RH */
+                aceleracion = getVerticalAcceleration(accel_x, accel_y, accel_z, gyro_x, gyro_y); /* En mg */
 
                 if (!is_calibrated && p_final > 0) 
                 { 
@@ -315,19 +383,19 @@ int main(void)
                     if (!subida_completada && altitude > (ALTITUD_DESPLIEGUE + 30)) 
                     {
                         subida_completada = 1; // Ya estamos arriba, ahora esperamos la bajada
-                        if (altitude >= ALTITUD_CAMARA) 
+                        if (altitude >= ALTITUD_CAMARA + 3) 
                         {
                             HAL_GPIO_WritePin(GPIOA, PIN_CAMARAS_Pin, GPIO_PIN_SET); // Enciende pin de cámara
-                            HAL_GPIO_WritePin(GPIOA, LED_VERDE_Pin, GPIO_PIN_SET); // Enciende LED rojo para indicar que se alcanzó altitud de cámara
                         }
                         subida_completada = 1;
                         trigger = 1;
+                        HAL_GPIO_WritePin(GPIOB, LED_VERDE_Pin, GPIO_PIN_SET); 
                     }
 
                     // 2. Disparar Trigger
                     if (subida_completada && !trigger_activado) 
                     {
-                        if (altitude <= ALTITUD_DESPLIEGUE) 
+                        if (altitude <= ALTITUD_DESPLIEGUE + 30) 
                         {
                             confirmaciones_altitud++;
                             if (confirmaciones_altitud >= 5) // ~500ms de confirmación estable
@@ -383,7 +451,7 @@ static void lora_send_async(void)
     static uint8_t buf[sizeof(TelemetryPacketLoRa)];
     TelemetryPacketLoRa pL;
     // Fix: Pass all 6 arguments in correct order: temperature, pressure, humidity, altitude, trigger
-    telemetry_build_LoRa(&pL, HEADER_TELEMETRY, (uint16_t)temperature, (uint16_t)pressure, (uint16_t)humedad, (uint16_t)altitude, (uint16_t)accel_y, (uint16_t)trigger);
+    telemetry_build_LoRa(&pL, HEADER_TELEMETRY, (uint16_t)temperature, (uint16_t)pressure, (uint16_t)humedad, (uint16_t)altitude, (uint16_t)aceleracion, (uint16_t)trigger);
     
     /* Guardamos para debug local */
     g_last_lora_packet = pL;

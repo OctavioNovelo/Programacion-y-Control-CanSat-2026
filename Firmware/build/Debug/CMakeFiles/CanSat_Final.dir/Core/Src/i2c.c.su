@@ -1,3 +1,0 @@
-/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Src/i2c.c:30:6:MX_I2C1_Init	8	static
-/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Src/i2c.c:59:6:HAL_I2C_MspInit	48	static
-/home/gashadokuro/Documents/Programacion_y_Control_CanSat_2026/Programacion-y-Control-CanSat-2026-/Firmware/Core/Src/i2c.c:89:6:HAL_I2C_MspDeInit	16	static
