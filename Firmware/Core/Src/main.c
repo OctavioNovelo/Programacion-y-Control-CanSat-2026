@@ -29,7 +29,7 @@
 /* ---- Configuración de Rendimiento ---- */
 #define LORA_POWER_LEVEL    0x82            /* Potencia baja-media */
 #define LORA_INTERVAL_MS    100            /* 1 Hz para estabilidad y debug, yo creo que es momento de cambiarlo */ 
-#define ALTITUD_DESPLIEGUE  300
+#define ALTITUD_DESPLIEGUE  200
 #define ALTITUD_CAMARA      250
 #define HEADER_TELEMETRY    0x10
 
@@ -359,7 +359,7 @@ int main(void)
                 uint32_t h_raw = (uint16_t)((d[6] << 8) | d[7]);
                 /* Proper Bosch Compensation */
                 int32_t t_final = BME280_compensate_T_int32(t_raw);
-                uint32_t p_final = BME280_compensate_P_int64(p_raw);
+                uint32_t p_final = BME280_compensate_P_int64( p_raw);
                 uint32_t h_final = BME280_compensate_H_int32(h_raw); // No usamos humedad por ahora, pero si la queremos agregar después, esta es la función que hay que usar.
                 
                 
@@ -417,13 +417,13 @@ int main(void)
             }
         }
 
-        /* --- SEGURIDAD: Apagar el pin de liberación tras 5 segundos --- */
+        /* --- SEGURIDAD: Apagar el pin de liberación tras 5 segundos --- 
         if (liberacion_en_progreso && (t_now - t_inicio_liberacion >= 5000)) 
         {
             HAL_GPIO_WritePin(GPIOB, PIN_LIBERACION_Pin, GPIO_PIN_RESET);
             liberacion_en_progreso = 0;
-        }
-
+        }*/
+        
         /* Lógica LoRa */
         if (t_now - t_lora >= LORA_INTERVAL_MS) {
             if (g_lora_ready) 
